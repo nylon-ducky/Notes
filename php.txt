@@ -192,3 +192,6 @@ also used for arrow functions but thats a different thing
 object operator
 calls and sets object variables. those being methods and properties
 
+function x()
+user defined functions are the same as in JS;
+

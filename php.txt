@@ -155,6 +155,12 @@ switch (   ) {
     code for when no case is true;
 }
 
+break;
+break statements can be used in switch statements or to jump out of a loop
+
+continue;
+related to the break statement, continue skips or breaks one iteration of a loop under a specified condition
+
 while, do while, and for loops
 all the same as in JS
 
@@ -165,3 +171,24 @@ $people = array("Sally","Sandra","Suzie","Sarah","Faye");
 foreach ($people as $value) {
     echo "$value <br/>";
 }
+
+to output both key and value pairs, you can use .... double arrow syntax?
+$people = array("Sally" => "mother",
+                "Sandra" => "aunt",
+                "Suzie" => "sister",
+                "Sarah" => "cousin",
+                "Faye" => "friend");
+foreach($people as $x => $val) {
+    echo "$x = $val ";
+}
+
+=>
+double arrow operator
+used in associative arrays to assign a value
+states that a property on the left has a corrosponding value on the right
+also used for arrow functions but thats a different thing
+
+->
+object operator
+calls and sets object variables. those being methods and properties
+

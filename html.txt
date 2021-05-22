@@ -1,0 +1,1453 @@
+<element  attribute=property:"value">
+*example* <h2 style="color:blue;"> Hello </h2>
+	~always use quotes(double or single) for attribute values~
+	~always use a semicolon fter style attribute values~~ ;;; CSS-syntax
+  
+<br>  ~break or new line
+<hr>  ~horizontal rule*** line across the page serving to seperate content
+<pre> ~preserve element preserves spaces and line breaks~~
+	**shows content exactly as it is written**
+
+<a> ~hyperlink  href ~Url for the hyperlink
+example~~ <a href="https://www.google.com"> look at gooogle </a>
+
+<img> ~Used to imbed an image into an HTML page
+src ~specifies the path to the image to be displayed
+example~~ <img src="https://images-na.ssl-images-amazon.com/images/I/71LgxJzwFKL._SL1500_.jpg">
+~	~ there are "absolute" meaning external and "relative" meaning local url types
+relative url's are more stable and wont change unless you change them
+
+alt attributes serve to specify an alternate text if the image can't be displayed or
+ if using a screen-reader for blind accessability
+~example~ <img src="someURL.net" alt="sorry, this is abroken link">
+
+
+style attributes
+<p style="font-family:impact; color:red;"> this is red impact font </p>
+
+lang attribute~ you should declare the lang attribute inside the <html> attribute to
+ assist search engines and browsers. also the country code can and should be added
+example~~ <html lang="en-US"> ~~ for english and US
+
+* TITLE *
+
+the title can be its own element before the body, used to show a title in the tab its open in. 
+IT CAN ALSO be used as an attribute so that when you mouse over an element, 	
+the title shows up. this is also called a tooltip
+~example~ 
+~tab title *element*~
+ 
+<!DOCTYPE html>
+<html>
+<!-- below is a title as an element and should be what shows in the tab it's open in -->
+
+<title> Grandma's heavy metal festival </title>
+
+~title as an *attribute*~~ ALSO CALLED A ***TOOLTIP***
+
+<h1 title="H1 element with a title"> Drag your mouse over me!! </h1>
+
+*result*
+file:///D:/notepad-.html/test.html
+
+
+
+************
+************
+                         ~~~~~~  FORMATTING ELEMENTS  ~~~~~~~
+ 
+************
+************
+
+
+
+<b> ~Bold Text
+<strong> ~important text 
+<i> ~italic text
+<em> ~Emphasized text **usually just italicized**
+<mark> ~Marked or highlightedtext
+<small> ~smaller text  **basically subscript but NOT LOWER than the rest of the text**
+<del> ~deleted text **shows the text but with a lign through the center of it**
+<ins> ~inserted text **underlines text**
+<sub> ~sub-script text 
+<sup> ~super-script text
+
+**Example**
+<h1>hello <sub>world</sub>!!</h1>
+
+
+************
+************
+                         ~~~~~~  QUOTATION AND CITATION ELEMENTS  ~~~~~~~
+ 
+************
+************
+
+<blockquote> ~defines a section quoted from another source 
+		***usually indented by browsers***
+		*** can contain a source URL using Cite as an 
+		   attribute(unseen *by page viewer*)  ***
+
+~~Example~ <blockquote cite="link to any creative work"> quoted text </blockquote>
+
+
+<cite> ~used to reference the title of a creative work, usually rendered in italics
+
+<q> ~for short quotations, literally just puts into quotations AKA: "double quotes"
+
+
+<abbr> ~for abbreviations or acronyms, used for ease of reading 
+	while providing relevant info. for search engines
+~~Example~~<p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+
+
+<address> ~for contact information, physical address, social media handle, or whatever else.
+		*usually renders in italics and always has a line break before and after*
+
+~~Example~~	<address>
+		Written by Rick Divvers.<br>
+		Visit us at:<br>
+		Peanut/butter.com<br>
+		801 Silvermark DR.<br>
+		19243 buttzville NJ
+		</address>
+
+<bdo> ~bi-directional override~ used to override current text direction
+~Example~ <bdo dir="rtl"> RED RUM </bdo>
+*literally reversing or mirroring the text*
+
+	
+
+************
+************
+                         ~~~~~~  !!COLORS!!  ~~~~~~~
+ 
+************
+************     SEMI ; COLONS!!!  
+
+
+~* HTML supports 140 standard color names *~
+~~~RGBA and HSLA color codes include transparency in the last section(the alpha perameter)
+								     using a decimal point
+**Examples**                   
+background	<h1 style="background-color:DodgerBlue;">Hello Harold</h1>      
+text color	<p style="color:pink;">fffffffferment</p>
+border-col	<h6 style="border:double 5px #518c4c;">smiffy ship</h6>
+
+
+
+
+************
+************
+                         ~~~~~~  CSS  ~~~~~~~
+ 
+************    all previous examples of personalization have been of in-line css
+************		now we're covering   ~internal~ as well, which is
+			setting perameters at the begining and calling upon them as needed**
+		
+**EXAMPLE of internal using style as an element rather than an attribute as done for inline**
+<html>
+<head>
+<style>
+body {background-color:green;}
+h1 {color:purple; background-color:yellow;}
+p {color:pink;}
+</style>
+</head>
+</html>
+
+**EXAMPLE of external styling** ~ most common ~ **
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+
+		
+~~* TIPS *~~
+
+	you can add a border to nearly all html elements
+	  padding is the space between text and a border
+          margin is the space outside the border
+
+stylesheet links can be a full url or can lead to 
+	a stylesheet saved in the html folder of the current website or
+you can also link to a stylesheet located in the same folder as the current page 
+	 just like in the example above  
+
+
+************
+************
+                         ~~~~~~  LINKS  ~~~~~~~
+ 
+************
+************
+a links target attribute tells the browser where to open the link. there are a few options 
+
+_self - Default. Opens the document in the same window/tab as it was clicked
+_blank - Opens the document in a new window or tab
+_parent - Opens the document in the parent frame
+_top - Opens the document in the full body of the window
+
+**Example**   <a href="https://www.google.com" target="_blank">try google</a>
+thats an absolute url, as in external website that requires a full web address.
+	you can also link to a Relative url meaning a link to a page on the same website
+		such as another article someone wrote on a blog. for that you dont need the
+		full https://www. link
+to jump to another page or part of a page on the same website,
+	you can use the id= attribute to create a book mark,
+	then add a link to that book mark
+**Example id="simple_id"
+		href="#simple_id"
+
+to use an image as a link, just put the <img> tag inbetween the <a> tags
+		 where the writing would normally go
+**Example**
+	<a href="https://www.google.com">
+	<img src="insert image link here" alt="some picture" style="width80px;height:40px;">
+	</a>
+
+
+use (( mailto: )) inside an href attribute to have that link open the users 
+		email program of choice to send a new email to said address in the link
+**Example** <a href="mailto:dursozd@gmail.com">send me an email</a>
+
+
+to use a button as a link, youll need to use a little javascript. 
+	however, you can also use css to make a link look like a button
+**Example**
+	<button onclick="A-URL.org">I'M a button</button>
+
+~~~****
+you can also use the title attribute within an element for a tooltip that says a little more 
+	about your link
+~~~****
+
+
+************
+************
+                         ~~~~~~  IMAGES  ~~~~~~~
+ 
+************
+************
+<img src="url" alt="alternatetext">
+always specify alt width and height. alt is for screen readers and will show if a page cannot load
+	the image
+always specify size (preferably with the style attribute) because if not, 
+	the page may flicker as the image loads. this way the browser can reserve space for it 
+	before it loads
+using style="width:100%;" will make the image responsive to the size of the display
+	that your website is being viewed on, but it will only scale up. 
+using max-width:100% will let the image scale down if it needs to, but it will never 
+	scale up larger than its origonal size.
+also see picture element below.
+
+an image map has defined clickable areas using the usemap attribute. which is an element
+	that you must create by defining shapes and the coordinates of where
+	you want those shapes to be, to designate the clickable areas
+
+**Example**
+<img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+
+<map name="workmap">
+  <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+  <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+  <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+</map>
+
+~~~The shapes you can use are 
+rect -- to add a rectangle, specify the top left CORNER'S coordinates and the bottom right
+circle -- to add a circle, find the center coordinates and specify the radius
+poly -- adding a polygon requires several coordinates that connect in straight lines
+default -- this option defines the entire image
+
+~~** you may use an image map for one or several links, 
+	as well as to trigger a javascript function  **~~
+
+*******						*******
+
+		~~* background-image *~~
+
+*******						*******
+
+may be used for one element or a whole page. if the image is smaller than the page or element
+	you wish to use it for, it will repeat until the page or element is full
+
+**	you may stop this with 		**
+**	background-repeat: no-repeat;	**
+
+
+	you may also set the background size property to cover
+background-size: cover;
+
+ 
+	to keep the image in place, and make sure the entire element is always covered
+	without any stretching *keep its origonal proportions* set the
+	background attatchment property to fixed
+
+background-attatchment: fixed;
+
+
+	To have the image stretch to cover the entire element, you can 
+	set the background-size property to 100% 100% 
+	this way, you can resize the window and the image will always stretch to fill.
+background-size: 100% 100%;
+
+
+
+*******						*******
+
+		~~* Picture element *~~
+
+*******						*******
+<picture> lets you show different images for different circumstances.
+	  may be used when one is worried bout screen size of device being used,
+ 	  or when one is worried about format. when it comes to format, 
+	  the browser will show whichever format it recognises first.
+	THIS lets the browser choose which img is best suited to the circumstances
+
+**Example**for screen size**
+
+<picture>
+  <source media="(min-width: 650px)" srcset="img_food.jpg">
+  <source media="(min-width: 465px)" srcset="img_car.jpg">
+  <img src="img_girl.jpg">
+</picture>
+
+**Example**for format**
+
+<picture>
+  <source srcset="img_avatar.png">
+  <source srcset="img_girl.jpg">
+  <img src="img_beatles.gif" alt="Beatles" style="width:auto;">
+</picture>
+
+
+
+
+
+************
+************
+                         ~~~~~~  TABLES  ~~~~~~~
+ 
+************
+************	used to arange data into rows and columns ****
+
+
+<table> defines an html table
+<tr>	defines each table row
+<th>	defines each table header which by default will be centered, and in bold
+<td>	defines each table data/cell which by default is normal and left-aligned
+
+
+** ADD A BORDER WITH INTERNAL CSS **
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {border: 2px solid black;}
+
+</style>
+</head>
+<body>
+<table style="width:100%">
+<tr>
+	<th>Favorite color</th>
+	<th>Least favorite color</th>
+	<th>Neutral feeling</th>
+</tr>
+<tr>
+	<td>blue</td>
+	<td>red</td>
+	<td>yellow</td>
+</tr>
+<tr>
+	<td>green</td>
+	<td>purple</td>
+	<td>silver</td>
+</tr>
+</table>
+</body>
+</html>
+
+
+*** TABLES AND CSS **
+use internal css (style as an element, not as an attribute because that'd be inline)
+use color names (hex color wouldnt work for me and i dont know why)
+border-collapse: collapse; if you want to make it look less appealing
+you could also add border-spacing if the above isn't your jam
+add padding if you want more space per cell
+text-align: left; for The Headings if you want 
+you can make one cell span more than one column with  **<th colspan="2">**  or more
+can do the vertical version of above with **<th rowspan="2">**  or more 
+
+<style>
+table, th, td 
+{
+border: 2px solid black;
+border-collapse:collapse;
+
+
+}
+th {text-align:left;}
+</style>
+
+
+add a caption or title with <caption> </caption> immediately after <table style=width:"100%">
+	but before any <tr> table rows .... can also add a footer with <tfoot>
+**Example**
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {border: 2px solid black;}
+
+</style>
+</head>
+<body>
+<table style="width:300px;">
+<caption>My Color Stuff</caption>
+<tr>
+	<th>Favorite color</th>
+	<th>Least favorite color</th>
+	<th>Neutral feeling</th>
+</tr>
+
+
+
+************
+************
+                         ~~~~~~  LISTS  ~~~~~~
+ 
+************
+************
+<ul> unordered list default has bullet-points
+<ol> ordered list marked by default with numbers
+<li> a list item
+
+	**DISCRIPTION LISTS**
+<dl> description or descriptive list
+	list of terms with a description of each term---shopping lsit format---
+<dt> is the term or *is the thing to be described*
+<dd> describes the term
+
+**Example**
+<dl>
+<dt>fresh veg</dt>
+<dd>carrots</dd>
+<dd>one tomato</dd>
+<dd>all the lettuce</dd>
+<dd>4 green peppers</dd>
+<dt>dairy</dt>
+<dd>almond milk</dd>
+<dd>cottage cheese</dd>
+<dd>eggs</dd>
+</dl>
+
+	**NESTED LISTS**    <ul> <li></li> <ul> <li></li> <li></li> </ul> <li></li> </ul>
+** a list item <li> can contain a new list and/or other html elements such as images and links **
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>A Nested List</h2>
+<p>Lists can be nested (list inside list)</p>
+
+<ul style="list-style-type:none;">
+
+<li>fresh veg</li>
+
+<ul style="list-style-type:square;">
+<li>carrots</li>
+<li>1 tomato</li>
+</ul>
+
+<li>dairy</li>
+
+<ul>
+<li>almond milk</li>
+<li>cottage cheese</li>
+</ul>
+
+</ul>
+
+</body>
+</html>
+
+
+
+
+
+	**CSS FOR LISTS**
+you can change an unordered lists bullet-points into other things
+disc (Default Bullet-Points)
+circle 
+square
+none
+<ul style="list-style-type:____;">
+**you can also use an image in place of a bullet point with 
+ list-style-image: url('______');  **
+
+~~Ordered lists number each item by default, but that can be changed.
+you can aso use letters for ordered lists. uppercase or lowercase
+<ol type="A">
+or you can do roman numerals. uppercase or lowercase
+<ol type="I">
+~~Now to reverse and count down you need to use <ol start="____"> just insert whatever
+	number or roman value you want to count down from
+
+*****									      *****	
+**YOU CAN ALSO USE THE CSS PROPERTY **float:left** TO DISPLAY A LIST HORIZONTALLY**
+
+float:left  to make a horizontal list 
+
+***Overflow property only works on block elements with a specified height***
+
+overflow: specifies what happens if content is too big for its box or is overflowing its box.
+		basically it dictates weather or not there will be a scroll bar.
+
+overflow-x  specifies what to do with the left/right edges of a box if the content overflows
+
+overflow-y specifies what to do with the top/bottom edges if the content overflows
+
+~~~~ values for these properties go as follows
+visible ~which is the default. any overflowing content will render outside the elements box
+hidden ~any overflow will be clipped and will not show
+scroll ~any overflow is clipped, but a scroll bar is added to see the rest of the content in its 
+	proper place
+auto ~similar to scroll but will only add a scroll bar when necessary
+
+
+***********  EXAMPLE NAV BAR ********
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111111;
+}
+</style>
+</head>
+<body>
+
+<h2>Navigation Menu</h2>
+<p>In this example, we use CSS to style the list horizontally, to create a navigation menu:</p>
+
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
+</body>
+</html>
+
+
+
+
+************
+************
+                         ~~~~~~  BLOCK-LEVEL AND INLINE ELEMENTS  ~~~~~~~
+ 
+************
+************
+
+block elements will always have a line break before and after, so that its on its own line
+ and it will keep that whole line for it's self
+
+inline elements on the other hand, will only take up as much room as necessary.
+
+
+
+**BLOCK ELEMENT LIST**
+
+<address> <article> <aside> <blockquote>
+<canvas>  <dd>	    <div>   <dl>
+<dt>	  <fieldset>  <figcaption>
+<figure>  <footer>  <form>  <h1>-<h6>
+<header>  <hr>      <li>    <main>
+<nav>	 <noscript> <ol>    <p>
+<pre>     <section> <table> <tfoot>
+<ul>	  <video>
+
+
+**INLINE ELEMENT LIST**
+
+<a> <abbr> <acronym> <b> <bdo> <big> <br> <button> <cite> <code> <dfn> 
+<em> <i> <img> <input> <kbd> <label> <map> <object> <output> <q>
+<samp> <script> <select> <small> <span> <strong> <sub> <sup> <textarea>
+<time> <tt> <var>
+
+
+*** THE DIV ELEMENT ***
+
+often used as a container for other html elements, and has no required attributes, but 
+	style, class, and id are common.
+
+when used with css, it can be used to style blocks of content
+**EXAMPLE**
+<div style="border: 5px double black;">
+<p> several words here </p>
+</div>
+
+
+** SPAN ELEMENT **
+ the span element is much like the div element in the sense that its used as a container but 
+	is only used to mark up PART of text or PART of a document as opposed to a whole element.
+**EXAMPLE**
+<p>Several people think hot air baloons can only be 
+<span style="color:yellow"; font-weight:bold">YELLOW</span>
+but they can actually be any color</p>
+
+
+
+
+
+************
+************
+                         ~~~~~~  CLASSES  ~~~~~~
+ 
+************
+************
+often used to point to a class name in a style sheet, it can also be used by javascript
+ to manipulate or preform tasks for elements with a specific class name using ...
+									 getElementsByClassName()
+
+class attributes can be used on any html elements 
+and are 
+CASE SENSATIVE!
+
+
+pseudo-classes ~~ a pseudo-class is a keyword that can be added to selectors (like in the style element)
+		in order to select a specific state of the element.
+<style>
+  a:hover {color:red;}
+
+this will make a link red when you hover over it
+
+
+** SYNTAX FOR CLASS **
+
+to create a class, you must start with a period and the name of the class youre creating 
+	then define your CSS properties within a set of curly braces 
+
+*EXAMPLE*
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	.balls { color:blue }
+</style>
+</head>
+<p class="balls"> somebodys got blue balls </p>
+
+<p> and <span class="balls">it's</span> not <span class="balls">ME</span>!</p>
+</html> 
+
+
+	you can have an element belong to more than one claass, you just need
+	 to use a space between them when declaring the first class
+*EXAMPLE*
+<p class="balls bankroll">
+
+now that <p> element will share the css properties of both classes
+*HOWEVER* as a reminder, if things in those classes contradict one another, like color, 
+ the browser will enforce whichever one it read most recently
+ (whichever class was set up in the style element, last)
+
+
+
+
+
+
+
+
+************
+************
+                         ~~~~~~  ID'S  ~~~~~~
+ 
+************
+************
+the differences between classes and id's 
+	classes can be used by multiple html elements, whereas an id must only be used 
+	by one element(within the page?). also a single element may only use one ID 
+	unlike when using classes to style elements. you may use multiple classes but only one ID. 
+
+** SYNTAX FOR ID'S **
+
+to create an id, you have to start with a hash symbol (#) then the name of the ID (case sensative) 
+	then list your style attributes in a pair of curly braces {}
+*EXAMPLE*
+<style>
+#buttons {color:blue;
+font-family:cursive;}
+
+
+
+to create a bookmark with an id, declare it in the element you want to bookmark
+
+<h1 id="jello">
+
+then to use it, reference it in a link 
+
+<a href="#jello">jump to jello</a>
+
+
+
+***you can also have javascript access an ID by using
+getElementById()
+
+
+
+************
+************
+                         ~~~~~~  I FRAMES  ~~~~~~
+ 
+************
+************
+
+iframe means "inline frame" and its used to (display a web page within another web page) 
+	embed another docuent within the current html document.
+you need to specify the size of the iframe using the height and width attributes, 
+	and those are measured in pixels(aka: pickles) by default, so only numbers are needed.
+	
+<iframe src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" 
+height="200" width="300" title="Iframe Example"></iframe>
+
+	you can also use a style attribute to specify size but in that case, you doo need to
+	specify that youre using pixels to measure the size. 
+
+<iframe src="demo_iframe.htm" style="height:200px;width:300px" title="Iframe Example"></iframe>
+
+
+you can also use the css border property to remove the border, or just personalize it if youd like.
+
+
+you can also use an iframe as a target for a link, so that when you click the link, 
+	it opens in the iframe, which could look really cool if you use a background image 
+	for the iframe 
+**EXAMPLE**
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Iframe - Target for a Link</h2>
+
+<iframe src="demo_iframe.htm" name="iframe_a" height="300px" width="100%" 
+title="Iframe Example" style="border:none"></iframe>
+
+<p><a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a></p>
+
+<p>When the target attribute of a link matches the name of an iframe,
+ the link will open in the iframe.</p>
+
+</body>
+</html>
+
+
+
+
+************
+************
+                         ~~~~~~  JAVA-SCRIPT  ~~~~~~
+ 
+************
+************
+the html tag <script> is used to define a client-side script (JavaScript)
+the script element either contains script statements or it points to
+an external script through the src attribute. common uses for javascript are
+image manipulation, form validation, and *dynamic changes of content
+which i think means content thats placed based on the users history or data*
+
+
+to select an html element, javascript most often uses 
+document.getElementById()
+
+when a user has a browser that doesnt support javascript, theres a <noscript> tag that will show 
+in such a case. it works very much like the alt tag for an image.
+
+
+************
+************
+                         ~~~~~~  FILE PATHS  ~~~~~~
+ 
+************
+************   *SYNTAX FOR FILE PATHS*
+
+this file path points to a file in the images folder at the root of the current web
+<img src="/images/picture.jpg" alt="Mountain">
+
+this example points to a file in the images folder thats located within the current folder
+<img src="images/picture.jpg" alt="Mountain">
+
+and this example points to a file in the images folder located in the folder thats one level
+	up from the current one
+<img src="../images/picture.jpg" alt="Mountain">
+
+
+there re also absolute file paths which are a full URL leading to an external file
+(unlike the above, which are all relative)
+it is considered best practice to use relative file paths as much as possible though.
+
+When using relative file paths, your web pages will not be bound to your current base URL. 
+All links will work on your own computer (localhost) as well as on your current public domain
+ and your future public domains.
+
+
+
+************
+************
+                         ~~~~~~  HEAD AND LAYOUT  ~~~~~~
+ 
+************
+************
+
+the head element, placed in the layout between the <html> tag and the <body> tag, is a container
+	for *metadata which is data about data*
+here we typically have data about the current html file. things like the
+document title, styles, and scripts. as well as other meta information.
+
+the title element, as discussed near the top of the page, is required to be in the head, 
+and is very important because it will act as the actual title of the tab its open in, 
+but more importantly, it serves a very important role in SEO (search engine optimization)
+	and thus, should be as accurate as possible
+
+<link> usually refers a page to an external style sheet, and belongs here, in the head.
+
+perhaps most importantly is the <meta> tag which stores pretty much all the meta data for a page,
+and is used by browsers, search engines, and other web services to:
+	define the character set used, define keywords for search engines
+ through the name and content tags, describe your page, define refresh intervals, name the author
+ and set the viewport for your website so that it looks good on all devices
+
+**EXAMPLES OF META TAGS**
+
+<meta charset="UTF-8">
+<meta name="description" content="Free Web tutorials">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="author" content="John Doe">
+
+
+** SETTING THE VIEWPORT **************************
+viewport being the users visable area of a web page, varies between devices and 
+	should be included in all web pages because it tells the browser how to control
+	the pages dimensions and scaling. This is called responsive web design.
+*EXAMPLE*
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+width=device-width 
+	this tells the browser to set the width of the page to match the width of
+	the screen being used by the device it's loaded on.
+initial-scale=1.0 
+	this sets the zoom level for when the page is initially loaded by the browser 
+
+
+
+<script> is for incorporating javascript into your html
+
+
+
+
+************
+************
+                         ~~~~~~  RESPONSIVE WEB DESIGN  ~~~~~~
+ 
+************
+************   see also viewport above
+
+**ALL popular css frameworks offer responsive design and are free and easy to use.
+	specifically w3 seems to be the best its faster and smaller than bootstrap, 
+	which is another common framework, as well as much more appealing to the eye.
+	W3 is designed to be independant of jquery or any other javascript library,
+	unlike bootstrap
+
+
+using style="width:100%;" will make the image responsive to the size of the display
+	that your website is being viewed on, but it will only scale up. 
+using max-width:100% will let the image scale down if it needs to, but it will never 
+	scale up larger than its origonal size.
+also see picture element above in *images*.
+
+
+**RESPONSIVE TEXT SIZE**
+the text size can be set using a vw unit, which stands for viewport width
+*EXAMPLE*
+<h1 style="font-size:10vw">Hello World</h1>
+this will let the text resize its self based on the size of the window or screen its viewed on
+
+
+**MEDIA QUERIES**
+media queries allow you to set completely different styles for different browser sizes.
+
+more on this in the css advanced section as well as more on many other topics previously covered
+
+
+
+
+
+************
+************
+                         ~~~~~~  COMPUTER CODE  ~~~~~~
+ 
+************
+************
+
+<kbd> element defines keyboard input and will be displayed in the browsers default font
+
+<samp> sample output is for output from a program, and will also be displayed in default font
+
+<code> used to define a piece of computer code.(i believe its also used for mathmtical expressions)
+	 does not preserve format
+	(white space or line breaks) but that can be resolved by placing it inside a preserve<pre>
+
+<var> is for variables in programming or a mathmatical expression and will be displayed in italics
+
+
+<pre> defines preformatted text
+
+
+
+************
+************
+                         ~~~~~~  SEMANTICS  ~~~~~~
+ 
+************
+************
+
+
+semantics are elements with a meaning. things like header, footer, main, article 
+basically, elements that are specific to a certain content
+
+
+the <header> element is a container for introductory content and or a set of navigational links.
+	a header element will usually contain one or more actual headings (h1-h6) as well as a 
+	logo, and "authorship information" or an address element
+
+the <footer> element also typically contains authorship information, or again, an <address>
+	 element that should also contain contact information.
+	 the footer should also contain copyright information, and related documents. 
+	 also possibly a sitemap and a back to top link
+
+a <nav> element defines a set of navigation links. this is really only intended for when you
+	have a bunch of links. not all links should be inside a nav element because
+	for disabled users who use a screen reader, the screen reader can use this 
+	to determin weather or not to omit the initial rendering of the content
+
+an <aside> element should be treted like an aside would in a book. containing indirectly related
+	content, and its best place would be in a side bar, using the ** float:right ** attribute
+
+
+<figure> and <figcaption>
+
+the figure element defines self-contained content like illustrations, diagrams, and the like. 
+the figcaption element defines the caption for a figure element
+
+
+<details> and <summary>
+
+the details tag is for optionsl, additional details that the user can 
+ 	choose to open or close as they please. by default it will be closed
+
+the summary tag defines a visable heading for the details element. the heading can be clicked
+	to view or hide. it also suports global and event attributes
+
+
+
+
+
+************
+************
+                         ~~~~~~  STYLE GUIDE  ~~~~~~
+ 
+************
+************ it is best to practice clean and tidy html code
+~~~always declare !doctype
+~use lowercase element names. it looks cleaner and is more convenient anyway
+~also use lowercase attribute names
+~always use quotes for attribute values. double quotes, specifically
+~close all elements even if you dont need to <br /> or <hr /> for example
+~ always specify alt, width and height for images
+
+~stop using spaces around equal signs. its easier to read, especially in groupings
+~ stop using the tab key! use two spaces of indentation instead 
+~ only add blank lines to seperate large or logical code blocks. for easy readability
+~ never forget the title element or the html and body elements as well as the head element
+~***CLOSE EMPTY ELEMENTS** add a space and forwrd slash to empty elements <hr />
+~always add the lang attribute in the html tag <html lang="en-us">
+~for proper interpretation and SEO, the language and charset shouold be defined 
+  as early as possible
+~setting the viewport right away is also incredibly important
+~*coments are also incredibly important both for yourself and for others to be able to
+  look back and easily read and see whats going on in your code. also makes it easier to fix 
+  any mistakes. also for comments that span more than one line, indent each line with two spaces
+~ short css rules can be written in a compressed manner, but if its going to be long,
+  be sure to make it span over multiple lines and to have the opening and closing curly braces
+  on lines seperate from the rules. opening bracket one space away from but on the same line
+  as the selector, two spaces of indentation for the rules, and a semicolon at the end
+  of each rule, and dont forget, the closing bracket needs to be on its own, new line.
+~ untidy or inconsistent html can and likely will, lead to errors. clean consistency is important
+~ file extensions must corrolate to their code family. (.css .html .js)
+
+
+
+************
+************
+                         ~~~~~~  HTML ENTITIES  ~~~~~~
+ 
+************
+************
+~using a greater than or less than sign in html could be confusing for the browser, as it may 
+ confuse it for a tag instead, so to use a (<) or (>) in your text, you must write &lt or &#60
+ these are charactor entities, they are used to display reserved charactors in html (LT or #60)
+~ &nbsp is another one, it stands for non breaking space, and is used for when two words 
+  should stick together, because if one is on one line and the other is on the next line,
+  it could be very confusing. things like 10 pm or s&p 500 
+~ &#8209 is used for a non breaking hypen (-) as in low-rider, maybe
+
+~ heres a list of useful charactor entities. these are caase sensative
+
+
+	non-breaking space	&nbsp;	&#160;
+<	less than	&lt;	&#60;
+>	greater than	&gt;	&#62;
+&	ampersand	&amp;	&#38;
+"	double quotation mark	&quot;	&#34;
+'	single quotation mark (apostrophe)	&apos;	&#39;
+¢	cent	&cent;	&#162;
+£	pound	&pound;	&#163;
+¥	yen	&yen;	&#165;
+€	euro	&euro;	&#8364;
+©	copyright	&copy;	&#169;
+®	registered trademark	&reg;	&#174;
+
+e
+~ also, there are entities for diacritical marks as well
+
+ ̀	a	a&#768;	à
+ ́	a	a&#769;	á
+̂	a	a&#770;	â
+ ̃	a	a&#771;	ã
+ ̀	O	O&#768;	Ò
+ ́	O	O&#769;	Ó
+̂	O	O&#770;	Ô
+ ̃	O	O&#771;	Õ
+
+
+~ and some mathmatical symbols supported by html (by a decimal or hexidecimal value)
+  you can find a full math reference here: https://www.w3schools.com/charsets/ref_utf_math.asp
+
+∀	&#8704;	&forall;	FOR ALL
+∂	&#8706;	&part;	PARTIAL DIFFERENTIAL
+∃	&#8707;	&exist;	THERE EXISTS
+∅	&#8709;	&empty;	EMPTY SETS
+∇	&#8711;	&nabla;	NABLA
+∈	&#8712;	&isin;	ELEMENT OF
+∉	&#8713;	&notin;	NOT AN ELEMENT OF
+∋	&#8715;	&ni;	CONTAINS AS MEMBER
+∏	&#8719;	&prod;	N-ARY PRODUCT
+∑	&#8721;	&sum;	N-ARY SUMMATION
+
+
+~ and another assortment of useful symbols
+
+™	&#8482;	&trade;	TRADEMARK
+←	&#8592;	&larr;	LEFTWARDS ARROW
+↑	&#8593;	&uarr;	UPWARDS ARROW
+→	&#8594;	&rarr;	RIGHTWARDS ARROW
+↓	&#8595;	&darr;	DOWNWARDS ARROW
+♠	&#9824;	&spades;	BLACK SPADE SUIT
+♣	&#9827;	&clubs;	BLACK CLUB SUIT
+♥	&#9829;	&hearts;	BLACK HEART SUIT
+♦	&#9830;	&diams;	BLACK DIAMOND SUIT
+
+~~~ there are many many more symbols with special codes for html so you can
+    find a bit of a directory here: https://www.w3schools.com/html/html_symbols.asp
+
+
+~ UTF-8
+  this is also called unicode and covers nearly all of the symbols and characters in the world.
+  this is also how you use emoji's. 
+  if not specified in the meta tag, this is the default character set in html. 
+
+~ these characters can be copied or sized and are displayed just like any other character in html
+~ heres a reference for utf-8 emoji codes: https://www.w3schools.com/charsets/ref_emoji.asp
+~ there are other character sets that are available, but UTF-8 is default for a reason.
+  if ever needed, some information on other character sets can be found 
+  here: https://www.w3schools.com/charsets/default.asp
+
+
+
+************
+************
+                         ~~~~~~  UNIFORM RESOURCE LOCATOR  ~~~~~~
+ 
+************
+************                               *URL*
+
+
+~ a url can be composed of letters as usual or it can be an IP address
+~ a url has its own structure to follow, that structure being
+
+scheme - defines the type of Internet service (most common is http or https)
+prefix - defines a domain prefix (default for http is www)
+domain - defines the Internet domain name (like w3schools.com)
+port - defines the port number at the host (default for http is 80)
+path - defines a path at the server (If omitted: the root directory of the site)
+filename - defines the name of a document or resource
+
+~ the scheme we see most often is https which stands for hyper text transfer protocol, 
+  and the S on the end of it stands for secure, which means it is encrypted.
+  so, when you see the warning on your browser that says this website is not secure,
+  its a non-encrypted website and the scheme is just http.
+~there are other schemes, like ftp which stands for file transfer protocol
+ and file, which is actually a file that is local to your computer.
+
+~URL's are encoded using the charset ASCII which is another one that you can 
+ read about at a link included in the section above. but this is why you sometimes see % signs
+ and all that other nonsense in a url. its converting things like spaces and characters 
+ that are not recognized by ASCII into ASCII
+
+
+
+
+
+************
+************
+                         ~~~~~~  HTML VS. XHTML  ~~~~~~
+ 
+************
+************    
+
+~XHTML stands for eXtensible hypertext markup language
+~it is a stricter, more XML based version of html
+~it is supported by all major browsers
+~this was designed to be able to add new capabilities and functionalities, but requires 
+ greater attention to detail and neatness in your code.
+~it was intended to be able to work with other data formats, such as XML, which you 
+ can learn about here: https://www.w3schools.com/xml/default.asp
+~the most important differences between the two, where html might try to display a page 
+ with or without some of these, XHTML will not!
+those being:
+~<!DOCTYPE> is of course, manditory
+~ the xmlns attribute in the <html> element is manditory
+~<html><head><title> and <body> are all also manditory
+~ elements must be properly nested
+~ attribute names must always be in lowercase
+~ attribute values must always be quoted
+~ attribute minimization (using an attributes name but not specifying a value) is forbidden
+~ elements and attribute names must always be in lowercase 
+~ Empty elements or stand alone elements must always be closed <hr />  
+  <img src="whatever.net" alt="image not loading" />
+
+
+
+
+************
+************
+                         ~~~~~~  FORMS  ~~~~~~
+ 
+************
+************        GIVE THESE A name=
+
+~the <form> element is used to create a form for a user to fill out, 
+  which is then to be sent to a server for processing
+
+~the <input> element is then used to define the type of user input, the most used types being:
+  text, which displays a single line, text input field.
+  radio, which displays a radio button for selecting one of multiple choices
+  checkbox, which displays a checkbox, for selecting any number of choices
+  button, which just displays a plain old, clickable button
+  submit, which displays the submit button that were all so familiar with
+
+a more comprehensive list of input types can be found 
+  here: https://www.w3schools.com/html/html_form_input_types.asp
+
+**EXAMPLE**
+
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+
+</style>
+<h2>Text input fields</h2>
+
+<form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Dough"><br />
+  <label for="details">Medical History:</label><br />
+  <textarea for="details" id="details" rows="10" overflow="auto"> </textarea> 
+  
+</form>
+
+<p>Note that the form itself is not visible.</p>
+
+<p>Also note that the default width of text input fields is 20 characters.</p>
+
+</body>
+</html>
+
+~ <input type="radio"> defines a radio button, which is for selecting only one choice
+
+~the <label> element in the example above is useful for screen-readers.
+  also the for attribute should be equal to the id attribute for the input element
+  to bind them together 
+
+~Each <input> field must have a name attribute to be submitted. if it is omitted, 
+  the value of the input field will not be sent
+
+~ACTION attribute. the action attribute defines an action to be preformed 
+  when the form is submitted. usually its sent to a file on the server.
+  But if the action attribute is omitted, the action is set to the current page by default.
+
+~TARGET attribute. the target attribute dictates where to display the response, 
+  once the form is submitted. these locastions are the same as opening a link.
+_blank _self _parent _top or if using an iframe, the framename is used. but _self is the default
+
+
+~METHOD attribute. the method attribute specifies the http method used to submit form data.
+  those methods are either GET or POST. 
+ ~GET~ the get method will add the form data to the url, so this will be visable 
+   in the url. this method is best for non-sensative data that a user may want to 
+   bookmark the response to. something like a personality quiz on facebook. 
+   this method has a limit of 2048 characters for a url
+ ~POST~ this method will hide the data inside the bodyh of the url and will not be visable. 
+    this method is best for sensative data like medical forms.
+    the submitted data will not be able to be bookmarked or ccessed again unless you do so
+    from within the server the data was submitted to. this method has no limit to the amount
+     of data transferred
+
+~AUTOCOMPLETE~ the autocomplete attribute is one we are all familiar with and most likely,
+   relatively fond of. the value of this can be on or off, and is generally much appreciated 
+
+~~ a list of all form attributes can be found 
+here: https://www.w3schools.com/html/html_forms_attributes.asp
+
+
+~the html <form> elements can contain one or more other elements, such as:
+  <input> <label> <select> <textarea> <button> <fieldset> <legend> <datalist>
+  <output> <option> <optgroup>
+
+the most used one is <input> and it can be displayed in many ways, depending on the 
+ type attribute. All the different input types can be found 
+here: https://www.w3schools.com/html/html_form_input_types.asp
+
+~the <label> element defines a label for several form elements. it is also very useful for 
+  screen readers because it will read out loud, the label when the user focus is on the input
+  element. it is also very helpful for users who have trouble clicking on small regions, 
+  because clicking on the text within the label element, it will toggle any corrosponding 
+  radio buttons or checkboxes. a label elements for attribbute should be the same as an inputs 
+  id attribute to bind them together
+
+~ the <select> element defines a dropdown list using <option>'s
+
+~the <option> element defines an option that can be selected from said dropdown list.
+  by default, the first option will be selected, unless you define a selection with the 
+  selected attribute
+*EXAMPLE*
+<option value="volvo">Volvo</option>
+<option value="fiat" selected>Fiat</option>
+
+~using the multiple attribute, lets users select more than one value
+  
+~ the <textarea> attribute defines a multi-line input field.
+*EXAMPLE*
+<textarea name="message" rows="10" cols="30">
+
+~ the rows attribute stnds for the visible number of lines in a text area 
+~ the cols attribute stands for the visible width of a text area
+
+another way to size a text area is to use css. 
+*EXAMPLE*
+<textarea name="message" style="width:200px; height:600px;">
+
+
+~<fieldset> is a way to group related data in a form
+~<legend> goes inside and defines a caption for, the <fieldset> element 
+
+~the <datalist> element specifies a list of pre-defined options for an input element.
+  users will see a dropdown list of these options as they input data.
+  the list attribute of the input element must refer to the id attribute of the datalist element
+
+~the <output> element represents the results of a calculation 
+
+
+
+
+************
+************
+                         ~~~~~~  FORM INPUT TYPES  ~~~~~~
+ 
+************
+************
+
+input types:
+ "reset" "color" "button" "password" "radio" "checkbox" "text" "date" "datetime-local" "email" 
+ "file" "hidden" "image" "month" "number" "range" "search" "submit" "tel" "time" "url" "week"
+
+input restrictions:
+ checked(pre-selected when page loads), disabled, max, maxlength(max number of characters), min,
+ pattern(specifies a regular expression to check the input value against), readonly(cannot be changed),
+ required, size(size in charactors of an input field), 
+ step(specifies legal number intervals for an input field), value 
+
+
+other attributes:
+multiple- 
+ specifies that the user may input multiple values in one field. 
+ works with email and file input types
+
+
+pattern-
+ specifies a regular expression that the users input is checked against when submitted
+ works with email, password, tel, url, search, date and text
+
+
+placeholder-
+ specifies a hint as to what the input should be. 
+ works with text, search, url, tel, email, and password
+
+
+required-
+ specifies that the input field must be filled out before submitting
+ works with text, search, url, tel, email, passowrd, dte pickers, checkbox, radio buttons, and file 
+
+
+step-
+ specifies a legal number interval for the input field. 
+ works with number, range, date, datetime-local, month, week, and time
+
+
+autofocus-
+ specifies that a certain field should be focused upon right when the page loads, 
+ so it will automatically have this field selected and ready for input and
+ the border for said field should be in bold
+
+
+list as an attribute-
+ defines a datalist element that contains pre-determined options to choose from for an input element.
+ its a dropdown list
+*Example*
+<form>
+  <input list="browsers">
+  <datalist id="browsers">
+    <option value="Internet Explorer">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+</form>
+
+
+autocomplete-
+ can be on or off and works with text, search, url, tel, email, password, 
+ datepickers, range, and color
+
+
+*************************  FORM ATTRIBUTES  **************************
+
+
+form as an attribute just uses a forms id= to dictate what form a stray input field should go to. 
+ form="medical_1"
+
+
+formaction-
+ specifies the url of the file that will process the information when submitted
+ **this overrides the action attribute of the <form> element.**
+
+
+formenctype-
+ form encryption type- only for forms with the method of post    method="post"
+ overrides the **enctype** attribute of a form element
+ works with submit and image 
+
+
+formmethod-
+ overrides the mehtod attribute on a <form> element
+   defines the http method for sending form data to the action url 
+ works with submit and image
+ form data can be sent as url variables (get) or as an http post transaction (post)
+
+
+
+formtarget-
+ input formtarget attribute specifies a name or keyword that indicates where to 
+ display the response after submitting the form.
+ this overrides the target attribute of the <form> element 
+ works with submit and image
+
+
+formnovalidate and novalidate-
+ indicates that input or information should not be validated when submitted
+ only works on <input type="submit">
+
+
+
+
+************
+************
+                         ~~~~~~  HTML CANVAS  ~~~~~~
+ 
+************
+************    
+
+
+
+
+
+
+                                 **come back to this**
+
+************
+************
+                         ~~~~~~  HTML API DRAG AND DROP  ~~~~~~
+ 
+************
+************    
+
+to make an element draggable, set the draggable attribute to true (draggable="true")
+
+then specify what should happen when the element is dragged. there are two ways to do this. 
+ you could use the attribute 
+ ondragstart to call the function drag(event) that specifies this is to be dragged.
+  *EXAMPLE* <img src="url" draggable="true" ondragstart="drag(event)" width="800" height="400">
+OR
+ you could declare a function, still being drag event but as drag(ev) then use 
+ ev.dataTransfer.setData("text", ev.target.id); but using the actual id of the thing being dragged
+

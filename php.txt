@@ -131,8 +131,37 @@ if null
 // variable $color is "red" if
 // $color does not exist or is null
    echo $color = $color ?? "red";
+
+
+arrays
+one cool thing I'd like to add is that arrays, unlike JS,
+need to be declared with the keyword array and inside (braces)
+rather than square brackets.
  
 if, else, elseif
 all the same as in JS except elseif is
 spelled as one word 
 
+switch statements
+syntax =
+switch (   ) {
+    case one:
+    code if case is one;
+    break;
+    case two;
+    code if case is two;
+    break;
+    default:
+    code for when no case is true;
+}
+
+while, do while, and for loops
+all the same as in JS
+
+foreach
+all one word no caps
+syntax =
+$people = array("Sally","Sandra","Suzie","Sarah","Faye");
+foreach ($people as $value) {
+    echo "$value <br/>";
+}

@@ -1,0 +1,952 @@
+UNIVERSAL SELECTOR
+ the star * is a universal selector and will select all elements on the page
+
+
+
+you can give an element multiple classes and they should be in the same parenthesies but 
+  seperated with a space. if one contradicts another, it will enforce the value that was 
+  declared most recently or basically, further down on the stylesheet.
+  it will always enforce whatever was last read
+*EXAMPLE* class="big large larger blue" 
+
+
+
+you can group element selectors together with a comma after each element declaration
+
+
+when linking to an external stylesheet, the propper syntax is 
+ <link rel="stylesheet" href="somestyle.css"/>
+
+
+************
+************
+ 
+                         ~~~~~~  BACKGROUNDS  ~~~~~~~
+ 
+************
+************
+
+
+when setting a background image, the propper syntax is
+ {background-image: url("something.gif");}
+
+
+by default background images repeat both vertically and horizontally. 
+  you can use "x" or "y" to pick one or the other. y= vertical x= horizontal
+*EXAMPLE* background-repeat: repeat-x;
+ you could also use 
+background-repeat: no-repeat;
+
+
+you can also specify th eposition of a background image by using 
+*EXAMPLE*
+  background-position: right top;
+
+
+
+background-attatchment: fixed; scroll;
+ FIXED will make the background-image scroll with the page and stay in view.
+ SCROLL will keep the image at the same spot on the page and will not stay in view as the user scrolls.
+
+
+
+you could also use shorthand for these properties. when doing so, 
+  the order of the property values goes as follows.
+background-color
+background-image
+background-repeat
+background-attachment
+background-position
+
+*EXAMPLE*
+ background: #ffffff url("img_tree.png") no-repeat fixed right top;
+
+
+
+************
+************
+                         ~~~~~~  BORDERS  ~~~~~~~
+ 
+************
+************
+
+border-style: 
+ it can have up to four values. one for each side. top, right, bottom, and left.
+  *can be shorthanded into that order 
+   or
+   top&bottom  right&left
+   or
+   top right&left bottom
+ *shorthand for border sides works with style, color, and width
+   *you can also shorthand all the properties in one go! both as a uniform border or on a per side basis.
+  border: 10px solid blue;
+  or
+  border-right: 10px double green; and so on with the other sides
+
+ dotted
+ dashed
+ solid
+ double 
+ groove
+ ridge
+ inset
+ outset
+ none
+ hidden
+
+other border properties
+ border-width: can be set in a bunch of different ways. thin, medium, and thick are pre-defined
+   you could also use "px, pt, cm, em, or any other mesurement"
+
+border-radius: for rounded corners. 
+*can also use 50% for an oval/circle
+ 
+
+border-color: can be set using color names, hex values, RGB and RGBA values, as well as HSL or HSLA values.
+   can also be set to transparent
+ *if border-color is not set, it will inherit the color of the element*
+ *can set different colors for each side, in order of top, right, bottom, left*
+
+
+
+
+************
+************
+ 
+                         ~~~~~~  MARGINS  ~~~~~~~
+ 
+************   space around an element
+************    top right bottom left
+    can specify a different value for each side with shorthand. using-- margin: top right bottom left
+      can also be done with three or two values. if three, the middle number will be for both sides.
+         if only two values, they will be for top and bottom then sides.
+
+can be specified using 
+auto
+length (px pt cm etcetera)
+%
+inherit
+**negative values are allowed**
+
+
+margin: auto;  
+ this will split the unused space outside the element evenly between the two sides. 
+ aka center it.
+
+
+margin collapse
+ if there are two different sized margins touching (top or bottom) this will get rid of the smaller one, 
+   which makes it look less wonkey
+
+
+
+
+************
+************
+ 
+                         ~~~~~~  PADDING  ~~~~~~~
+ 
+************     padding is the space between an element and the content inside it
+************  
+ can be specified with 
+ length values px pt cm etcetera
+ %
+ inherit
+ **can NOT use auto and can NOT use negative values**
+
+
+shorthand- can specify a different value for each side going in a clockwise rotation, if using
+ 3 or 2 values, it goes in the same clockwise rotation.
+
+
+width and box-sizing:
+ using width and padding together will specify the width then add the padding to it. 
+ to specify padding while keeping the specified width, use
+ box-sizing: border-box;
+
+
+
+
+
+
+************
+************
+ 
+                         ~~~~~~  WIDTH AND HEIGHT  ~~~~~~~
+ 
+************
+************  only the size of the element, does not include size of borders or margins or anything else
+
+   can have the following values.
+ auto -- this is the default. the browser will calculate width and height.
+ length -- uses a measurement like px or cm
+ %
+ initial --- which sets height and width to default value
+ inherit
+
+
+ max-width 
+ using max-width can be used to keep the browser from adding a scroll bar to something when 
+  the window is too small for the origonal size of the element
+   ... it improves the browsers handling of small windows
+
+ you can also set
+min or max width or height.
+ this helps control the browsers handling of different window sizes in comparison to the element 
+
+
+
+************
+************
+ 
+                         ~~~~~~  BOX MODEL  ~~~~~~~
+ 
+************
+************
+
+
+every element in html can be considered a box. 
+the CSS box model is a way of explaining layout and design. 
+it's basically a box that wraps around each element.
+from the content outward, the box model goes as follows.
+ content
+ padding
+ border
+ margin
+
+
+************
+************
+ 
+                         ~~~~~~  OUTLINE  ~~~~~~~
+ 
+************
+************
+
+the outline is a totally seperate thing from the elements border or any other part of the box model.
+ the outline serves only to outline an element to make it stand out more.
+ the outline goes outside the elements border and may overlap other content.
+ 
+
+outline properties: style-color-width-offset
+ the outline has many styles to choose from.
+    dotted-dashed-solid-double
+3D: groove-ridge-inset-outset
+others: none and hidden
+
+outline-width:
+ thin (usually 1px) 
+ medium (usually 3px)
+ thick (usually 5px)
+ specified size (px pt cm em *or any other*)
+
+
+outline-color: the outline color can be specified any way you'd like, but it can also be set to 
+ outline-color: invert
+ this insures that the outline can be seen no matter what color the background is. 
+ it adds a black outline outside the colored outline
+
+*EXAMPLE*
+  border: 1px solid yellow;
+  outline-style: solid;
+  outline-color: invert;
+
+
+outline-offset:
+ this offsets the outline outside of an elements border or edge. 
+ the space between is of course, transparent.
+
+outline shorthand works like any other shorthand in css. it goes 
+ width, style, color, then you can declare other specs as seeen above.
+
+
+************
+************
+ 
+                         ~~~~~~  TEXT  ~~~~~~~
+ 
+************
+************
+
+
+color:blue
+ I wouldve thought it would be specified by text-color but no, its just color.
+
+text-align:
+ center, justify, left or right
+
+
+text-decoration: none;
+ this is usually used to remove underlines from links.
+ but you can add a line-through or an overline with this property as well.
+
+
+text-transform: capitalize; uppercase; lowercase;
+ can be used for capitalizing the first letter of every word, or for turning every letter into 
+ uppercase or lowercase.
+ 
+text-indent: 
+ this is used to specify the indentation of the first line in a text.
+
+
+letter-spacing:
+ this is self explanatory.
+
+
+line-height:
+ specifies the space between lines.
+ default in most browsers is 110%-120%
+ 
+
+word-spacing: normal;
+ can be set to normal or specified using any other means of measurement
+  may also be set to initial or inherit.
+
+
+white-space: normal;
+ can also be set to 
+nowrap, pre, pre-line, pre-wrap, initial, inherit
+
+
+text-shadow: 2px 2px 5px red;
+ horizontal then vertical shadow, then blur effect, then color. 
+
+
+
+
+************
+************
+ 
+                         ~~~~~~  FONT  ~~~~~~~
+ 
+************
+************
+
+font-family:
+ the font family property should have multiple families named in case one is not available. 
+ start with the one you want, then a back up, and then a generic family name so the browser
+ can pick one in case the first two are not available.
+
+*EXAMPLE*
+ font-family: papyrus, lucida handwriting, brush script mt, cursive;
+
+
+font-style:
+ font style can have 3 values. normal, italic, or oblique. 
+ oblique is yet another garbage item, that looks just like another, much more widely suported version.
+ it looks just like italic text, but isnt universally supported.
+
+
+font-weight:
+ font weight can be normal, lighter, bold, or specified with a number up to 1000.
+  lighter looks just like normal, and a font weight of 900 looks just like bold,
+  but a font weight of 1000 looks a little more bold than bold, maybe ...
+
+
+
+font-variant:
+ can be normal, or small-caps.
+ small caps is displayed as written, but the lowercase letters are still smaller 
+ than those capitalized by you, but still written in capital form.  
+ all letters are caps, but anything you want capitalized will still be bigger than the other letters.
+
+
+
+font-size:
+ font size can be specified in many ways.
+ using pixels to size your font will allow you to use the zoom tool and it will resize the font as such.
+ using EM allows the user to change the size of fonts in their browser. 1 em is equal to 16px.
+ 
+*** setting font size to 100% for the body element will insure consistency across all browsers 
+     as well as functionality for the zoom tool and resizing the text.
+body {font-size:100%;} ***
+
+
+
+    RESPONSIVE FONT SIZE!
+  you can make your font-size responsive by using vw (viewport width) units.
+  using vw units will allow the font to grow along with the resizing of the browser window.
+  1vw is equal to 1% of the width of the viewport or browser window.
+ 
+
+
+google fonts
+ if you dont want to use any of the web safe fonts, you can always use free google fonts. 
+ you just need to link to them as a stylesheet in the head section. then refer to it in your css.
+
+
+
+font shorthand
+ font size and family are the only required values. but otherwise the declarations go in this order
+ style, variant, weight, size/line-height, family. and it looks like this
+**EXAMPLE**
+  font: italic small-caps bold 12px/30px georgia, papyrus, serif;
+
+
+
+
+************
+************
+ 
+                         ~~~~~~  ICONS  ~~~~~~~
+ 
+************
+************
+
+icon libraries are the easiest way to add icons to a web page. the one w3-schools reccomends is 
+ Font Awesome
+
+a link to the w3-schools font awesome tutorial can be found
+Here: https://www.w3schools.com/icons/fontawesome5_intro.asp
+
+to use the font awesome library, go to the url below and get a code for it to put into the head element
+https://fontawesome.com/
+
+you can also style them with CSS just as you would with anything else
+
+
+*** to use bootstrap glyphicons, add the url below to your head section.
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+*** to use google icons, add the following link to the head section of your page.
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+*** for a complete list of icons, use this url for a w3 tutorial.
+https://www.w3schools.com/icons/default.asp
+
+
+
+
+************
+************
+ 
+                         ~~~~~~  LINKS  ~~~~~~~
+ 
+************
+************
+links can be styled with any css property, such as font family, color, background, or text decoration.
+ text-decoration is frequently used to remove the underlines from links.
+
+links can also be styled based on their status.
+
+ a:link - a normal, unvisited link
+ a:visited - a link the user has visited
+ a:hover - a link when the user mouses over it
+ a:active - a link the moment it is clicked
+
+there are however, some rules about the order in which you declare these.
+ a:hover MUST come after a:link and a:visited
+ a:active MUST come after a:hover
+
+
+
+
+************
+************
+ 
+                         ~~~~~~  CURSORS  ~~~~~~~
+ 
+************
+************
+ you can use many different cursors for different things. some of which may be helpful for links.
+
+<span style="cursor:auto">auto</span><br>
+<span style="cursor:crosshair">crosshair</span><br>
+<span style="cursor:default">default</span><br>
+<span style="cursor:e-resize">e-resize</span><br>
+<span style="cursor:help">help</span><br>
+<span style="cursor:move">move</span><br>
+<span style="cursor:n-resize">n-resize</span><br>
+<span style="cursor:ne-resize">ne-resize</span><br>
+<span style="cursor:nw-resize">nw-resize</span><br>
+<span style="cursor:pointer">pointer</span><br>
+<span style="cursor:progress">progress</span><br>
+<span style="cursor:s-resize">s-resize</span><br>
+<span style="cursor:se-resize">se-resize</span><br>
+<span style="cursor:sw-resize">sw-resize</span><br>
+<span style="cursor:text">text</span><br>
+<span style="cursor:w-resize">w-resize</span><br>
+<span style="cursor:wait">wait</span><br>
+
+
+************
+************
+ 
+                         ~~~~~~  LISTS  ~~~~~~~
+ 
+************
+************
+
+you can style lists with colors, as you would anything else.
+
+
+you can use an image in place of a bullet-point in lists by using:
+
+  list-style-image: url('________');
+    
+
+
+list-style-position: inside; outside;
+ can be set to inside or outside (outside is the default)
+ when set to inside, it will appear at the beginning of the line,
+  which then pushes the text back a little, indenting it
+
+
+list-style-type: none;
+ can be used to remove the bullet points
+
+you may also wish to remove the default padding and margin by setting those values to zero
+ margin: 0;
+ padding: 0;
+
+
+list-style:
+ this is the shorthand declaration for all these properties. it goes in this order.
+ type, position, image.  
+  the type is only a backup if youre going to use an image though, in case the link doesnt work
+   if one of these properties is missing, the default will be inserted, if need be
+ 
+
+
+
+
+************
+************
+ 
+                         ~~~~~~  TABLES  ~~~~~~~
+ 
+************
+************
+decorate tables with the border property. 
+ the order goes as follows.
+ width, type, color.
+ *EXAMPLE*
+ border: 3px double black;
+
+you can also remove borders with 
+ border-collapse: collapse;
+
+
+you can specify the width and height with percentages. 
+ width: 100%;
+ making the table width 100% will make it span the entire width of the screen or window
+
+you can also specify width and height with px. 
+
+
+
+text-align: center;
+  you can align the text in each table-head or table-data (cell)
+  you can use text-align for center, left, or right.
+ 
+
+vertical-align: bottom;
+  you can also vertically align your items in each 
+  table-data cell, if youre going to specify a non-default height for them.
+
+*EXAMPLE*
+  
+td {height: 50px;
+    vertical-align: top;}
+
+
+this will give a large cell with additional space for hand written information,
+ such as a note or a signature
+
+
+you can create horizontal dividers by using
+th td {border-bottom: __________ }
+
+
+you can highlight table rows on mouse over using the hover selector
+ tr:hover { background-color: lightgray; }
+
+
+for a table that has a darker shade for every other row, you can use
+ tr:nth-child(*even/odd*) { background-color: lightgray; }
+
+
+you can make a table responsive by adding a horizontal scroll bar with
+
+<div style="overflow-x:auto;">
+
+<table>
+... table content ...
+</table>
+
+</div>
+
+you can also add a vertical scroll bar by changing the overflow-x to overflow-y
+
+
+
+
+************
+************
+ 
+                         ~~~~~~  DISPLAY  ~~~~~~~
+ 
+************
+************   to read more about the display property and its many different values, follow this link:
+  https://www.w3schools.com/cssref/pr_class_display.asp
+
+
+ the display property is most commonly set to 
+inline, block, or hidden.
+ using display: hidden; makes it easy to have something like a dropdown but for more (expandable) content
+ you do however need to use javascript for this
+
+
+you can also use 
+ visibility:hidden;
+
+
+
+setting the max-width for a block element (which will naturally take up as much width as possible)
+ can prevent it from stretching out to the full width of the screen.
+ this improves the browsers handling of large elements on a smaller screen or window
+this is also important for making a website usable on a small screen, like a phone.
+
+using a <div> element can be very handy for designing something with different screen sizes in mind. 
+ the div element has default perameters of
+max-width: 500px;
+margin: auto;
+ these two things make it very good for responsive design
+
+
+************
+************
+ 
+                         ~~~~~~  POSITION  ~~~~~~~
+ 
+************
+************
+
+the position property has 5 values to choose from.
+ static, relative, fixed, absolute, or sticky.
+
+
+
+position: static;
+ static is the default for any html element and is positioned according to the normal flow of a page.
+
+
+position: relative;
+ elements with a position set to relative will need to be adjusted from its normal position using the
+  right, bottom, or left properties.
+   other content will not fill any gaps left by changing the position of a relative element
+
+
+position: fixed;
+ an element with the position set to fixed must be positioned
+  using the top, right, bottom, and left properties.
+ an element with a fixed position will stay where it is relative to the viewport, even when scrolling.
+ example, that floating head saying "talk to a customer service agent" in the bottom right corner.
+
+
+position: absolute;
+ an element with the position set to absolute is positioned relative to its nearest ancestor.
+  if no ancestor is present, it will be placed relative to the viewport and behave 
+   like an element with the position set to fixed.
+
+
+position: sticky;
+ an element with its position set to sticky will behave like a relative element
+  until a certain point on the scroll bar is hit. it will then "stick" into place like a fixed element.
+you must specify the positioning for when it becomes "sticky" with top, right, bottom, or left.  
+ the most common youll see is something that sticks to the top of the page once you scroll past it. 
+ in this case, the positioning is set to  
+ top: 0;
+
+
+
+z-index:
+   the z index is a property for overlapping elements. 
+    in this case, an element can have a positive (foreground) or a negative (background) value.
+     if elements overlap without a z-index being set, the one positioned last in the html code
+      will be shown on top.
+ to have a logo or an image behind some text or any other element, youll want to set the z-index to -1
+*EXAMPLE*
+ 
+img 
+{  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1; }
+
+
+
+
+clip:
+ you can also set the position of an element then set the shape of it by using the clip property.
+ read more about the clip property here:
+ https://www.w3schools.com/cssref/pr_pos_clip.asp
+ 
+
+
+
+
+************
+************
+ 
+                         ~~~~~~  OVERFLOW  ~~~~~~~
+ 
+************
+************    see also: lists/css for lists in html notes
+
+the overflow property only works on block elements with a specified height.
+ 
+overflow specifies what happens when the content is too long or large for it's box, or is overflowing. 
+ 
+overflow-x 
+ overflow x specifies what to do with the horizontal edges of the box if the content overflows.
+ 
+overflow-y
+ overflow y specifies what to do with the vertical aspect of the box when the content overflows its 
+  designated space.
+
+overflow values:
+
+ visable
+   when the overflow is set to visable, the content that is overflowing from its designated area will 
+     render outside that area. which looks bad.
+
+ hidden
+   when the overflow property is set to hidden, the content that overflows its box will be clipped 
+     and will not be visable.
+
+ scroll
+   when the overflow property is set to scroll, the overflow will be clipped, but a scroll bar will be 
+     added to the contents box.
+
+ auto
+   when the overflow property is set to auto, it will work similarly to scroll, but will only add a 
+     scroll bar when necessary.
+
+
+
+
+************
+************
+ 
+                         ~~~~~~ POSITIONING ~~~~~~~
+ 
+************        FLOAT / CLEAR / BOX-SIZING / FLEX-BOX 
+************
+
+the float property is used for formatting content. --- positioning images and things.
+
+float:
+ left (of its container)
+ right (of its container)
+ none (default, shows wherever it occurs in the text)
+ inherit (inherits the float value of its parent element)
+
+
+basically, the float property is used to wrap text around images. (also sometimes used for nav bars)
+ it is actually not uncommon to use float for a bunch of things on a website ... or the whole thing.
+
+
+see also: clear
+ https://www.w3schools.com/css/css_float_clear.asp
+
+
+see also: box-sizing
+ https://www.w3schools.com/css/css3_box-sizing.asp
+
+
+see also: flex-box
+ https://www.w3schools.com/css/css3_flexbox.asp
+
+
+
+  
+************
+************
+ 
+                         ~~~~~~  COMBINATORS  ~~~~~~~
+ 
+************
+************
+
+general combinator: ,
+ using a comma to simplify a css sheet can be very helpful in keeping it short and neat.
+  a comma is used to declair a pair or set of elements to have the same styling attributes.
+   h1, h2, h3, p {}
+    the above would declair all headings and <p> elements to have the same style attributes.
+
+ 
+descendant selector: [space]
+ descendant in this case means one that is after another. a descendant could be a direct child
+  of an element or it could be 5 levels deep in the DOM tree.
+   in the case of <div> with a nested child of <p>
+    one would declare div, then a space, then p and that would select all p elements
+     inside a div element
+
+
+child selector: >
+ the child selector selects all elements that are children of a specified element.
+  a child element is defined as an element in the next nested level down.
+   basically one that is directly nested inside another
+
+
+adjacent sibling selector: +
+ an adjacent sibling is defined as elements that have the same parent element but are both placed
+  immediately following them. in the case of <div> with a nested element of <p>
+   div + p
+    this would select all <p> elements placed immediately after a <div> element.
+
+
+general sibling selector: ~
+ the general sibling selector selects all elements that are siblings 
+  siblings in this case just mean they come after a specified element in the DOM tree.
+   or further down the html page
+
+
+
+************
+************
+ 
+                         ~~~~~~  PSEUDO-CLASSES  ~~~~~~~
+ 
+************
+************          there are many different pseudo-classes a person could use,
+                      so follow this link for a list of them all:
+                      https://www.w3schools.com/css/css_pseudo_classes.asp
+
+pseudo classes are additional selectors specifically for the state of an element. 
+ like the hover pseudo-class
+
+
+the syntax goes as follows:
+ selector:pseudo-class {property: value;}
+
+pseudo-classes for links:
+ link: unvisited
+ visited: for a visited link
+ hover: for when you mouse over a link
+ active: for a selected link. as in as youre clicking oon it.
+
+
+
+these pseudo-classes for links need to be in a certain order to be effective. 
+
+ link
+ visited
+ hover
+ active
+
+
+
+pseudo-classes can be combined with css classes, you just need to declare the css class  
+as you would in a stylesheet. so in this example, we will use a <p> element with a class of style, 
+but change the color to blue when we hover over this <p> element.
+
+ p.style:hover {color: blue;}
+
+
+
+you can also use these properties to show another element upon hovering.
+ heres an example of how we would use the hover property to show another element.
+ in this example, we will use a <div> element as the main container, 
+ and have it show a <p> element on hover. 
+ NOTE that you have to set the display for the hidden element to none.
+ then you change the display value on hover. 
+
+p { display: none; }
+
+div:hover p { display: block; }
+
+
+
+
+
+************
+************
+ 
+                         ~~~~~~  PSEUDO-ELEMENTS  ~~~~~~~
+ 
+************
+************
+
+pseudo-elements are used to style different parts of an element, rather than the whole thing.
+ such as the first letter or the first line of an element 
+  they can be used to change the styling if a specified area or insert additional content before or after 
+   a specified area.
+
+
+different options for pseudo elements go as follows:
+ ::first-lline {which is used to add special styling to the first line of an element.}
+       heres a list of different stylings you can apply to the first-line pseudo element.
+        font properties
+        color properties
+        background properties
+        word-spacing
+        letter-spacing
+        text-decoration
+        vertical-align
+        text-transform
+        line-height
+        clear
+
+ ::first-letter {which is used to add special stylings to the first letter of an element}
+        and heres a list of properties you can apply to the first letter selector
+		font properties
+		color properties 
+		background properties
+		margin properties
+		padding properties
+		border properties
+		text-decoration
+		vertical-align (only if "float" is "none")
+		text-transform
+		line-height
+		float
+		clear
+
+
+  	 NOTICE that there are properties like float and margin that you can apply to first-letter 
+          but not for first-line.
+
+
+
+ ::before {this is used to insert content before an element or class}
+   using the before pseudo element will look something like this.
+
+ .smile1::before { content: url(smiley.fucking.gif) }
+
+
+
+ ::after {this will look and be used the same as the before pseudo element, located above}
+
+
+
+ ::selection { this is basically used for highlighting text and specifying how it should look. }
+     for the selection pseudo-element, you can only change a few things. those being:
+	color
+	background
+	cursor
+	outline
+
+
+
+	you can combine pseudo-elements with css classes in one declaration. 
+ 	(but not pseudo-classes with pseudo-elements)
+	 heres what that would look like.
+ 
+	 h1.class::pseudo-element {color: blue;}
+
+
+
+	you may also want to use multiple pseudo-elements in the same stylesheet.
+  	you can do this, but they will need to be seperate declarations. 
+  	you cannot combine multiple pseudo elements into one declaration.
+	that would look something like this.
+ 
+	<style>
+	 p::first-letter {font-size: 40px; color: green;}
+
+	 p::first-line { word-spacing: 20px; text-decoration: underline; }
+	</style>

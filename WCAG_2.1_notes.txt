@@ -1,0 +1,4 @@
+what is WCAG 2.1?
+WCAG stands for Web Content Accessability Guidelines and aims to accomidate people with disabilities and make things easier for them to navigate, use, see, or hear. 2.1 is the latest version of these guidelines.
+
+

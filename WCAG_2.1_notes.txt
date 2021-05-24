@@ -2,3 +2,59 @@ what is WCAG 2.1?
 WCAG stands for Web Content Accessability Guidelines and aims to accomidate people with disabilities and make things easier for them to navigate, use, see, or hear. 2.1 is the latest version of these guidelines.
 
 
+User Agent
+a user agent is any software that a person uses to access web content.
+they can be command driven or GUI-based.
+usually a user agent or UA is referring to a web browser.
+screen readers are not a UA. They work seperately, on top of a web browser or any other software on your device.
+
+Assistive Technologies!
+These are really wonderful things. Assistive technologies are what make the web accessable to people with disabilities, but It's our responsability as developers to make sure our content is as optimized as possible for these technologies. 
+    Examples include:
+    Screen magnifiers
+    **  Refreshable Braille Display
+        these are common at public kiosks. They raise and lower pins in the proper sequence to convert text to braille
+    Screen readers
+    Voice browsers -- similar to screen reader but only for web content.
+
+Alternative input devices
+which are for people who may not be able to use a keyboard or mouse.
+    Head pointers
+    Motion tracking or eye tracking
+    "Switches" or single switch entry devices
+    Large print or tactile keyboards
+    Speech input software
+
+
+Adaptive Strategies
+these are options people may toggle to assist them or improve their interaction with web content. 
+    Examples include:
+    increasing text size
+    enabling high contrast
+    reducting mouse speed/sensitivity
+    enabling closed captions
+    **  Reduced interface
+        a reduced interface may show an outline of a web page, showing only the most relevant information or by hiding less relevaant or unnecessary content. 
+
+Presentation
+    sometimes people with dyslexia may use text to speech to assist reading. Highlighting text while it's being read aloud may also be very beneficial
+
+some people may use browser plugins that pause, hide, or stop automatic things like animations, pop-up windows, and redirection. Basically anything that could overwhealm the user.
+
+glossarys explaining complex words and phrases can be super helpful not only to people who may have difficulties reading or writing, but also to people viewing content that is not in their native language.
+
+Volume control seperate to the overall system volume can be very convenient not only for people with poor hearing but also for people using screen readers. 
+
+Sounds that automatically play can really hinder the user experience when using a screen reader bbecause they can play over the screenreader, making it difficult or even impossible to navigate the page.
+
+
+
+
+
+
+
+
+
+
+Images
+all images should have an alternative text not only for screen readers, but people who turn off image support in areas with low or expensive bandwidth. Also that information is available for search engines and could be beneficial for SEO.

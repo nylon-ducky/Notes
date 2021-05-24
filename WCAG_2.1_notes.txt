@@ -47,14 +47,25 @@ Volume control seperate to the overall system volume can be very convenient not 
 
 Sounds that automatically play can really hinder the user experience when using a screen reader bbecause they can play over the screenreader, making it difficult or even impossible to navigate the page.
 
+Visual orientation cues
+using things like different background colors for specific sections of a web page help users differentiate the different parts of content which can be really helpful for people with certain disabilities.
+    Also ensuring that titles, headings, and relevant information is in a prominent area will assist users with navigation and orientation.
+
+Supplemental illustrations
+these can go a long way when used in the right context to help people with low literacy or empairments. something as simple as using an emoji can get the point across to someone with low or even no literacy 
+(in a certain language or overall)   
+
+clear and consistent design
+navigation and links should clearly and concisely convey their destination and purpose.
+sections of information should be clearly or visibly seperated into appropriate groups.
+
+
+multimedia alternative text
+alternative text for multimedia and other non text objects should always be specified and describe the original content.
+there are many reasons as to why or where an alternate text may come into play. Ultimately, its important for all non-text objects.
+
+
+content should be organized in a manner so that it can be navigated and understood without the use of stylesheets. Older technology or low/poor bandwidth connections may not be able to handle style sheets.
 
 
 
-
-
-
-
-
-
-Images
-all images should have an alternative text not only for screen readers, but people who turn off image support in areas with low or expensive bandwidth. Also that information is available for search engines and could be beneficial for SEO.

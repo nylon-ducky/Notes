@@ -67,5 +67,17 @@ there are many reasons as to why or where an alternate text may come into play. 
 
 content should be organized in a manner so that it can be navigated and understood without the use of stylesheets. Older technology or low/poor bandwidth connections may not be able to handle style sheets.
 
+the most underserved disabilities in this area, or the ones talked about the least are the inbetweens such as low vision or hard of hearing,     
+physical/motor-control: slow motion, no mouse, alternative input devices
+as well as 
+cognitive or neurological: learning impairment, age related issues, difficulty understanding content or confusion 
+
+ 
+ dont use tables for design layout. they're for tabular data only
+
+ do maybe ... use empty alt tag for decorative images to not overwhealm the experience for a screenreader user
+
+ do use fluid or autoscaling css units (for everything preferably).
+        not only for responsiveness, but for text enlargement settings
 
 

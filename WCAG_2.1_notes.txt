@@ -88,3 +88,42 @@ dont align lots of text to the center.
 do center left aligned text.
 
 
+
+
+
+******************************* FORMS ******************************
+
+  Other than basic info
+  Before beginning the process, users should be made aware of any information they may need other than the basics like name, birth date, and contact info.
+
+  508-- saving progress
+  I'm pretty sure its a 508 requirement to let users save their progress on a form. Otherwise, it may pose a problem for those who have difficulty concentrating or rembering, or even for those who are multitasking or only have a short window of time to work on it.
+
+  Order
+  Form fields need to be in a logical order for people who are keyboard only users or for those who use a screen reader. Use tab key to test how keyboard only and screen reader users will navigate through the form.
+
+  Visual cues
+    Active input fields should be highlighted so people can clearly see where they are. 
+  Form validation should also have visual cues as well as audible cues for screen readers. So that users know when there is an error that needs to be fixed.
+    
+  Labels
+  Labels should be short but as descriptive as possible.
+  Use the word (Required) as opposed to a star.
+     Labels must also be properly associated with their corrosponding field so that screen reader users know. The WCAG uses the term "Programmatically" here. Meaning the association of the label with it's input field needs to be made using code. 
+     Example: 
+            the for attribute of the label needs to match the id of the corrosponding input field.
+
+     <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName">
+
+
+  Input Requirements
+  If an input field has certain requirements that need to be met, those requirements should be clearly visible before filling out said field. You should also use color as a visual cue. 
+  You could/should also use the aria-required="true" tag.
+
+
+  Phone numbers 
+  they should not be required. Someone who is deaf, may not use a phone. If a phone number will be a part of a form, you should have a section about how the user would prefer to be contacted.
+
+  Form validation
+  Form validation needs to not only have visual cues to let someone know whats wrong, but also needs to say specifically what is required for a valid input value.

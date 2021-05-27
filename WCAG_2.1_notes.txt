@@ -87,8 +87,10 @@ do design content in one column for accessibility and responsiveness as well as 
 dont align lots of text to the center.
 do center left aligned text.
 
+do use clear language. Avoid abbreviations, dashes, and slang words.
 
-
+Dont use Read More or Click Here! for link text.
+do use descriptive link text.
 
 
 ******************************* FORMS ******************************
@@ -127,3 +129,14 @@ do center left aligned text.
 
   Form validation
   Form validation needs to not only have visual cues to let someone know whats wrong, but also needs to say specifically what is required for a valid input value.
+
+
+
+  ******************************* ARIA ******************************
+
+    ARIA is for giving semantics to elements. Most helpful for HTML <div> and <span> elements, as these are the only two out of over 100 that have no semantic meaning.
+
+    role=""  and  aria-label=""
+    there are many roles and labels that one could apply to any html element out there. sometimes redundancy is a good thing. so doing something like adding role="main" to a <main> tag can be helpful for anybody using an old browser that doesnt support the main tag.
+
+

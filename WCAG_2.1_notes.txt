@@ -92,6 +92,9 @@ do use clear language. Avoid abbreviations, dashes, and slang words.
 Dont use Read More or Click Here! for link text.
 do use descriptive link text.
 
+Do use only one of each landmark element. if you do need to use say, two nav elements, use a descriptive ARIA label to differentiate between them.
+
+
 
 ******************************* FORMS ******************************
 
@@ -137,6 +140,8 @@ do use descriptive link text.
     ARIA is for giving semantics to elements. Most helpful for HTML <div> and <span> elements, as these are the only two out of over 100 that have no semantic meaning.
 
     role=""  and  aria-label=""
-    there are many roles and labels that one could apply to any html element out there. sometimes redundancy is a good thing. so doing something like adding role="main" to a <main> tag can be helpful for anybody using an old browser that doesnt support the main tag.
+    there are many roles and labels that one could apply to any html element out there. Both are used for when one simply cannot use a semantically appropriate HTML tag. 
+    
+    sometimes redundancy is a good thing. so doing something like adding role="main" to a <main> tag can be helpful for anybody using an old browser that doesnt support the main tag.
 
 

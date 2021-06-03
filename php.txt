@@ -137,6 +137,8 @@ arrays
 one cool thing I'd like to add is that arrays, unlike JS,
 need to be declared with the keyword array and inside (braces)
 rather than square brackets.
+  but to access a certain index of an array, you should declare the index position inside square brackets. so like: 
+  echo dog[2];
  
 if, else, elseif
 all the same as in JS except elseif is
@@ -195,3 +197,8 @@ calls and sets object variables. those being methods and properties
 function x()
 user defined functions are the same as in JS;
 
+phpinfo()
+ this is a built in php function that will  bring up a whole bunch of info about php ... its super helpful!!
+
+ http://localhost/phpmyadmin
+  this is basically a control pannel for xampp

@@ -1,0 +1,12 @@
+
+syntax 
+ basic jquery syntax goes like this;
+     $(selector).action();
+         a dollar sign to say youre using jquery.
+         a selector inside braces to say what youre wanting to work with.
+         and an action to preform
+
+$(document).ready(function(){     });
+ all jquery needs to be wrapped inside a document ready function to prevent it from running before the page is created in the browswer. you cant manipulate something that doesnt exist yet!
+ 
+

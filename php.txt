@@ -202,3 +202,23 @@ phpinfo()
 
  http://localhost/phpmyadmin
   this is basically a control pannel for xampp
+
+php constants
+  syntax:
+  define("name","value", true/false);
+                        true for case insensative name otherwise name is case sensitive
+            you can also define constant arrays!
+            define("people",[
+            "rhonda", "kyle", "sandra", "mack"
+            ], true);
+    constants are global values and can be used anywhere in the script.
+
+pass-by-reference as argument to update variable.
+        function add_five(&$value) {
+        $value += 5;
+        }
+
+        $num = 2;
+        add_five($num);
+        echo $num;
+

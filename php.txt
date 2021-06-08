@@ -222,3 +222,47 @@ pass-by-reference as argument to update variable.
         add_five($num);
         echo $num;
 
+superglobals
+   $GLOBALS['']
+    php stores all global variables in this array, and you can add to it with the synatx above. no need to use a dollar sign inside the brackets. just the name of the variable
+
+   $_SERVER
+     this is super cool and holds all the fun information. look here: 
+                    https://www.w3schools.com/php/php_superglobals_request.asp
+      to read all about it.
+
+   $_REQUEST
+     this is used to collect form data after submission. 
+     $name = $_REQUEST['fname'];
+
+   $_POST
+     weve used this before. heres the syntax for form data:
+     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+     $name = $_POST['fname'];
+
+   $_GET
+     also for form data, when using method of get.
+       can also retrieve information from a url.
+
+
+RegEx
+   regulare expressions are a sequence of characters that form a search pattern.
+      syntax:   $mySearch = "/words 123/i";
+            the i at the end there is a modifier that makes the search case sensative, but its not required. if your search has slashes in it, you could use other delimiters such as # or ~
+
+   regular expressions have their own functions such as preg_match() which will tell if a string contains that search pattern. it will return a 1 for yes or a 0 for no.
+
+   preg_match_all() 
+    this will tell you how many times it found your search in a string 
+
+   preg_replace()
+     this one will find all instances that match your search pattern and replace them with your new string. this takes three inputs. search pattern, what you want it replaced with, and where you want it to search.
+
+   regular expressions have other expression modifiers, search patterns, metacharacters (chars with special meaning), and quantifiers to define the quantities you want it to find, like a minimum number of occurrances or at least one, or a range of 3 to 6 or whatever.
+
+ regular expressions are for defining patterns and you can find the full w3schools reference here: 
+   https://www.w3schools.com/php/php_ref_regex.asp
+
+
+
+

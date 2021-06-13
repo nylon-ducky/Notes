@@ -264,5 +264,19 @@ RegEx
    https://www.w3schools.com/php/php_ref_regex.asp
 
 
+date()
+  to display the day of the week, you need to use a lowercase L ....  echo date("l");
+
+      for year, you can use a lowercase y for the last two numbers of the year, or an uppercase y for the full four digit year. 
+      date("y");    date("Y");
+
+          to format  the date with slashes, dots, or dashes, you use those to seperate the letters.
+           date("d/m/Y"); date("y.d.m"); date("m-d-y/Y");
+
+              time
+                for time, 
 
 
+
+
+  

@@ -1,0 +1,43 @@
+sass 
+  sass stands for syntactically awesome stylesheets.
+  sass requires ruby to be installed because its written in ruby. 
+  
+
+//
+  sass supports regular multi line comments but also enables you to use single line comments
+
+nesting
+  sass lets you nest style rules in similar syntax to html.
+     example:
+     .listclass {
+         ul {
+             padding: 3px;
+             margin: 10px;
+             height: 10vh;
+             width: fit-content;
+            }
+
+         li {
+             background-color: white;
+            }
+
+         li:nth-child(odd) {
+             background-color: lightgray;
+            }
+
+         a {
+             color: blue;
+             text-decoration: none;
+            }
+     }
+
+  you can also nest properties with the same prefix in the same way.
+     example:
+         font: {
+             family: Helvetica;
+             size: 200px;
+             weight: bold;
+         }
+
+
+

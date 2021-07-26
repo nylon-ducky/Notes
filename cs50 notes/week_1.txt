@@ -1,0 +1,17 @@
+This week we were introduced to C.
+the syntax is just like JavaScript but you need to declare your types (int, string, float, and the like).
+
+We covered the basics of the language.
+loops, functions, parameters, variables, datatypes, truncation.
+
+We did Hello World with C and then wrote a program that:
+Takes in an  int  as starting_population of llamas.
+Takes in an  int  (same size or larger) as end_population.
+
+    and calculated years to reach end population 
+
+    using:
+    new_llamas = starting_population / 3;
+    dead_llamas = starting_population / 4;
+
+now theres one more challenge or activity to complete.

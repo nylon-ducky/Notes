@@ -1,0 +1,16 @@
+bits vs bytes 
+bits are 1's and 0's ... this is how computers count. 
+almost like how humans have a 1's 10's and 100's place, 
+computers just use doubles. they have either a 1 or a 0
+for each place the count goes like this:
+   128  64  32  16  8  4  2  1
+
+	so to write 56, it would be 
+	0 0 1 1 1 0 0 0
+	or for  42, it'd be
+	0 0 1 0 1 0 1 0
+	or for  43, it'd be
+	0 0 1 0 1 0 1 1
+
+a byte is a sequence or unit of 8 bits
+

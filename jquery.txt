@@ -1,0 +1,56 @@
+
+syntax 
+ basic jquery syntax goes like this;
+     $(selector).action();
+         a dollar sign to say youre using jquery.
+         a selector inside parentheses to say what youre wanting to work with.
+         and an action to preform
+
+
+$(document).ready(function(){     });
+ all jquery needs to be wrapped inside a document ready function to prevent it from running before the page is created in the browswer. you cant manipulate something that doesnt exist yet! 
+ ((you should still do this even if using the defer attribute on your script tag))
+ 
+
+you can also add multiple event handlers to one element
+$("p").on({
+    mouseenter: function(){
+        $("this").css("background-color", "blue");
+    },
+    mouseleave: function(){
+        $("this").hide();
+    },
+    click: function(){
+        $("this").show();
+    }
+});
+
+
+.hide() .show()
+  these methods should not be placed on content directly, but are best used for a dropdown or something. they can take parameters of time either in milliseconds or "fast" and "slow" but the words must be in quotations. they can also take in a second parameter, seperated by a comma, to designate a function to be preformed after the hiding or showing of the element. this is called a callback function.
+
+
+.fadeIn() .fadeOut() .fadeToggle()
+  these can also all take in fast slow or millisecond parameters, and a callback function.this is also the same syntax for slide methods
+
+.fadeTo()
+  this method is used to fade into an opacity between 0 and 1. it can take miliseconds or fast/slow, and the opacity value, seperated by a comma.
+
+animate()
+  $("#dosomething").animate({bottom: '1vh'}, "slow", callbackfunction);
+  the animate method is the same as every other method until you get to the parameters. the last two are the same as all others, you specify a speed (optional), and a callback function. but the first parameter goes inside a set of curly braces (just like normal css) and specifies a property to animate and the value it should transition to. this could also get a little more exciting too! you can animate multiple properties seperated by a comma, like so;
+  $("#dosomething").animate({
+     width: '95px',
+     height: '160px',
+     margin: '180px',
+     bottom: '44px'
+  },"slow");
+                to animate properties with multiple words, like background-color must be written  in camelCase rather than with a dash. 
+
+                ALSO color animation is not included in the core jquery library, so youll need to download a plugin for that.
+
+                you may also use show, hide, or toggle as property animation values. toggle will switch between 0 and the pre-defined value.
+
+
+
+

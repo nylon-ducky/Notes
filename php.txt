@@ -1,0 +1,282 @@
+.php
+must be written in a file with .php extension
+
+<?php  ?>
+opening and closing tag
+shouldnt leave empty space after closing tag
+technically dont need a closing tag if 
+there will be no more HTML code after it
+
+echo print
+both output things to the page.
+
+//   #
+both do single line comments
+
+/*   */
+multiline comment
+
+single quotes and double quotes behave differently
+
+single quotes ignore escape characters
+single quotes will not use variables and display
+any content inside them, "as is"
+
+.
+string concatination is done with a dot between 
+them rather than plus sign like in JS
+
+use upper-case for all constants
+
+++
+incrementing by one.
+place ++ before variable to change value
+immediately
+or 
+place after to use original value then increment
+
+
+	$num = 5;
+	$refToNum = &$num;
+	$num = 40;
+	echo '$refToNum = " . $refToNum;
+THIS will display the variable name 
+then a value.
+the value displayed will be 40 because the & sign
+there points to $num and although $num's value 
+was changed after the declaration, it will still
+show the new value.
+
+
+.= 
+to add on to an existing variable, you use .= 
+
+=&
+these operators together create an alias for 
+an existing variable
+
+${   }
+to parse a variable, put it in between a set of
+curly braces following a dollar sign
+
+define()
+to create a constant, use the define() function.
+constants are automatically a global value
+define("greeting", "Hello ${name}");
+echo greeting;
+
+you can also create an array constant
+define("shoppinglist", ["milk","eggs","butter"];
+echo shoppinglist[1];
+
+arythmatic operators are the same as every other
+language. including shorthand.
+
+
+!= <>
+not equal operators
+
+== 
+equal
+
+!==
+not identical
+
+===
+identical
+
+<=>
+spaceship
+returns -1, 0, or 1 when one variable is less than
+equal to or larger than another.
+
+increment and decrement operators can be placed 
+before or after the variable.
+putting before the variable will increment or 
+decrement before the value is returned 
+placing after the variable will return the value 
+then increment or decrement
+
+&& and 
+if both things are true.
+but the word and behaves a little differently
+than ampersands
+
+or ||
+if either thing is true
+
+xor 
+if one case is true but not the other
+
+!
+not
+
+.
+concatenation
+
+.= 
+concatenation assignment.
+add on to an existing valaue
+
+?:
+//if empty($user) = TRUE, set $status = "anonymous"
+echo $status = 
+(empty($user)) ? "anonymous":"logged in";
+//so basically:
+// if something = true/false ? 
+then option1 : option2;
+
+??
+if null
+// variable $color is "red" if
+// $color does not exist or is null
+   echo $color = $color ?? "red";
+
+
+arrays
+one cool thing I'd like to add is that arrays, unlike JS,
+need to be declared with the keyword array and inside (braces)
+rather than square brackets.
+  but to access a certain index of an array, you should declare the index position inside square brackets. so like: 
+  echo dog[2];
+ 
+if, else, elseif
+all the same as in JS except elseif is
+spelled as one word 
+
+switch statements
+syntax =
+switch (   ) {
+    case one:
+    code if case is one;
+    break;
+    case two;
+    code if case is two;
+    break;
+    default:
+    code for when no case is true;
+}
+
+break;
+break statements can be used in switch statements or to jump out of a loop
+
+continue;
+related to the break statement, continue skips or breaks one iteration of a loop under a specified condition
+
+while, do while, and for loops
+all the same as in JS
+
+foreach
+all one word no caps
+syntax =
+$people = array("Sally","Sandra","Suzie","Sarah","Faye");
+foreach ($people as $value) {
+    echo "$value <br/>";
+}
+
+to output both key and value pairs, you can use .... double arrow syntax?
+$people = array("Sally" => "mother",
+                "Sandra" => "aunt",
+                "Suzie" => "sister",
+                "Sarah" => "cousin",
+                "Faye" => "friend");
+foreach($people as $x => $val) {
+    echo "$x = $val ";
+}
+
+=>
+double arrow operator
+used in associative arrays to assign a value
+states that a property on the left has a corrosponding value on the right
+also used for arrow functions but thats a different thing
+
+->
+object operator
+calls and sets object variables. those being methods and properties
+
+function x()
+user defined functions are the same as in JS;
+
+phpinfo()
+ this is a built in php function that will  bring up a whole bunch of info about php ... its super helpful!!
+
+ http://localhost/phpmyadmin
+  this is basically a control pannel for xampp
+
+php constants
+  syntax:
+  define("name","value", true/false);
+                        true for case insensative name otherwise name is case sensitive
+            you can also define constant arrays!
+            define("people",[
+            "rhonda", "kyle", "sandra", "mack"
+            ], true);
+    constants are global values and can be used anywhere in the script.
+
+pass-by-reference as argument to update variable.
+        function add_five(&$value) {
+        $value += 5;
+        }
+
+        $num = 2;
+        add_five($num);
+        echo $num;
+
+superglobals
+   $GLOBALS['']
+    php stores all global variables in this array, and you can add to it with the synatx above. no need to use a dollar sign inside the brackets. just the name of the variable
+
+   $_SERVER
+     this is super cool and holds all the fun information. look here: 
+                    https://www.w3schools.com/php/php_superglobals_request.asp
+      to read all about it.
+
+   $_REQUEST
+     this is used to collect form data after submission. 
+     $name = $_REQUEST['fname'];
+
+   $_POST
+     weve used this before. heres the syntax for form data:
+     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+     $name = $_POST['fname'];
+
+   $_GET
+     also for form data, when using method of get.
+       can also retrieve information from a url.
+
+
+RegEx
+   regulare expressions are a sequence of characters that form a search pattern.
+      syntax:   $mySearch = "/words 123/i";
+            the i at the end there is a modifier that makes the search case sensative, but its not required. if your search has slashes in it, you could use other delimiters such as # or ~
+
+   regular expressions have their own functions such as preg_match() which will tell if a string contains that search pattern. it will return a 1 for yes or a 0 for no.
+
+   preg_match_all() 
+    this will tell you how many times it found your search in a string 
+
+   preg_replace()
+     this one will find all instances that match your search pattern and replace them with your new string. this takes three inputs. search pattern, what you want it replaced with, and where you want it to search.
+
+   regular expressions have other expression modifiers, search patterns, metacharacters (chars with special meaning), and quantifiers to define the quantities you want it to find, like a minimum number of occurrances or at least one, or a range of 3 to 6 or whatever.
+
+ regular expressions are for defining patterns and you can find the full w3schools reference here: 
+   https://www.w3schools.com/php/php_ref_regex.asp
+
+
+date()
+  to display the day of the week, you need to use a lowercase L ....  echo date("l");
+
+      for year, you can use a lowercase y for the last two numbers of the year, or an uppercase y for the full four digit year. 
+      date("y");    date("Y");
+
+          to format  the date with slashes, dots, or dashes, you use those to seperate the letters.
+           date("d/m/Y"); date("y.d.m"); date("m-d-y/Y");
+
+              time
+                for time, 
+
+
+
+
+  

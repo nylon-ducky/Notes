@@ -1,0 +1,339 @@
+document.getElementById(  ).innerHTML = 
+"can contain a function call, 
+a math problem, or anything in quotation marks, but whatever it 
+contains, has to have some kind of output"
+
+
+document.write();
+nearly the same as the above, but in this case, it would add it inline
+wherever it is in the document. if its in a script tag at the bottom
+of the document, it will write in the bottom of the document.
+
+!!! NEVER !!! invoke document.write() after the page has loaded.
+  like with a button or any other event.
+  because it will replace everything else on the page in favor of 
+  the document.write() content
+
+
+window.alert()
+this is just an alert box that appears at the top of the page ...
+ everybody is familiar with these.
+ also the window. keyword is optional.
+
+
+console.log()
+this is a very useful command for a developer to test whatever theyre 
+working on. the user of the program will not see this but it is very 
+helpful for the creator to check that any piece of the application
+is working properly.
+
+
+window.print()
+this is a common button youll see on almost every web page.
+the command its self must be attatched to a button though, usually 
+one with the styling of a printer icon.
+ you may be able to get away without the window. keyword, but it seems
+like good form to use it anyway.
+
+
+
+statements
+javascript statements are made up of 
+ values, operators, keywords, and comments.
+statements are basically declarations of what a particular things
+value is, and theyre seperated by semicolons.
+
+
+code blocks
+a code block refers to block scope, something thats covered later.
+but in short, a code block is a group of statements that go together.
+such as in a functions curly braces.
+
+
+syntax
+syntax refers to the rules to how something needs to be written.
+in JS, the syntax for variables is basically that for a string,
+which is any string of letters, numbers, or charactors, needs to 
+have quotes around it. thats single or double quotes. and a semicolon.
+numbers do not need a set of wuotes, but they do still need
+the semicolon.
+you may also want to declare a variable without assigning it 
+a value yet. in which case, the syntax is 
+var xyz;
+
+
+operators
+operators are the charactors or symbols you use to tell the program
+what to do. you have arythmatic operators like +-*%/ and you have 
+JS specific operators such as || = && ===
+all these operators do different things thatll be covered later,
+but in short, these are referred to as operators.
+some that i always forget are 
+EXPONENTATION **
+NOT !  which is for writing logic
+
+
+expressions
+an expression in javascript can refer to a mathmatical expression,
+or concatenating strings together to make a full sentance or something
+
+
+keywords
+keywords are words that are reserved for specific actions or meanings.
+words like var, const, function, boolean
+these words are all reserved for a special purpose and cannotbe used 
+as names for a  variable or a function or anything like that.
+however, it is comon in examples of code, to see things like
+myVar or myFunction or var1 
+
+
+identifiers
+an identifier is the name you give something. 
+usually following a keyword.
+identifiers should be as unique and descriptive as possible, but 
+sometimes you may see something vague such as var x or myFunction.
+in var x = 12;
+x is the identifier for the variable 
+and the value assigned to it is 12
+in javascript, an identifier may contain and must begin with
+letters, numbers, a dollar sign, or an underscore
+
+
+
+comments
+comments are things that are ignored or not executed by the program. 
+theyre usually used for developers to make notes for themselves 
+and any other developers that might work on their program 
+in the future.
+comments also may be used to excommunicate a line of code or a 
+function but still keep it available instead or erasing it 
+  comments for a single line can be done with just two forward slashes
+//
+or for a multi-line comment, a slash and a star for the beginning and 
+ a star then slash for the end
+/*   */
+
+
+data types
+javascript can work with a few different datatypes. 
+numbers strings booleans and bitwise which is just binary values
+as well as objects and arrays, undefined and null
+
+case sensativity
+javascript is case-sensative. this means that naming something 
+in camelcase and then trying to call it in all lowercase will
+break whatever youre working on.
+
+
+charset
+charset is short for charactor set. JS uses a charset referred to as 
+UTF-8
+which covers almost all symbols and special charactors in the world.
+this will come in handy when you actually need a charactor like the 
+degrees circle for temperature.
+
+
+variables
+variables are containers used for storing data values.
+theyre declared with the keyword var
+this used to be the only way to declare a variable but since 2015
+javascript now supports the keywords let and const which are more 
+descriptive of the capabilities of their value.
+a variable can also be one statement but have many values.
+this is typically referred to as an object
+ var person = name= "Burt", age= 32, country= "South America";
+when giving a variable many values, you must seperate them
+with a comma and end the whole thing with a semicolon as always.
+a variable declared with the keyword var can be hoisted which means
+you can call the value of that variable earlier in the script, before
+the area you declared it in. so this means if i use var to declare
+a variable halfway into the script, 
+i can still call that variable in the beginning of the program.
+
+
+re-declaring variables
+this is where let and const come in. you may want to re-declare 
+a variables value later on in the program and you can do that with the
+keyword var but using the keyword let is better for this, and thats 
+why they invented let and const. let is a variable that can be 
+re-declared and const is a variable that remains constant throughout
+the program.
+
+
+let
+previously to 2015 javascript only had two ways of looking at things,
+referred to as scopes. there was global scope, referring to the whole 
+project, and function scope, referring to just the scope of whatever 
+the particular function encompasses. meaning a variable declared 
+inside a function could only be referred to inside that function.
+now, we have block scope
+which refers to a place where multiple statements can be made although
+only one is expected.
+a block statement must be inside a set of curly braces.
+blocks are commonly associated with if, else and for statements.
+a variable declared with let or const inside a set of curly braces
+can only be referred to within those braces.
+the same is NOT true for a variable declared with the keyword var.
+a variable declared inside a set of curly braces with the keyword var
+can indeed be referred to outside the scope of that block. 
+if you try to redefine a variable that was declared with var inside a
+block, that will override any previous declarations for that variable
+and inside or outside of that block, that variable will have the new
+value. this is where the keyword let really shines. if you declare 
+var x = 100;
+then inside a block,
+{
+let x = 20; 
+}
+x will have a value of 20 inside the block but still have 
+a value of 100 outside the block.
+however!!
+redeclaring a variable with a different keyword within the same scope,
+is not allowed, and will result in an error message.
+   be it global scope or block scope. 
+only in a different scope, can you declare a variable with a different
+keyword.
+-----------------------
+a global variable declared with var belongs to the window object but
+a global variable declared with let does bnot belong to the window...
+
+
+const
+a variable declared with const must also have a value assigned to it 
+when it is declared. it will keep the same value within that scope
+no matter what.
+this means that if you declare a variable with const but dont assign
+a value to it, this will result in an error message and trying to 
+use that variable will not work. 
+HOWEVER you can redefine a variable with const in a different scope.
+----------------------
+if youre using const to define an object, you canNOT reassign that
+variable a new object. that will result in an error message.
+   but you CAN reassign new values to the object.
+so an object of tim declared with const will always be tim, 
+and his name could not be changed. 
+but you could redeclare tim's height or something.
+if you declare an array with const, much like tim, the name can not 
+be changed but the contents of the array can indeed be changed.
+   trying to hoist with const is interesting. 
+if you declare a const halfway into your script and call it at the 
+beginning of it, the program will be aware of the variable but 
+the value of the const variable will not have been initialized, 
+so although it knows the variable exists, it does not know the value.
+doing this is a syntactical error and the code will not run... 
+
+
+arythmatic
+javascript automatically understands math. but its not as simple
+as using a calculator. in js, the equals sign is an 
+assignment operator. used for assigning values to variables.
+but the other math symbols stand true to what you know.
+the plus sign can be used to add numbers or concatonate strings.
+the forward slash is used for devision and the percent sign is used
+for the remainder in a devision problem.
+** two stars is used for exponentiation **
+PEMDAS applies here too!
+
+
+functions() {
+a javascript function is where you have your programming logic.
+this is where the program will make decisions and handle processes.
+the syntax for a function is as it is here. the keyword function,
+followed by the identifier name and  a set of parentheses containing
+any perameters. then a set of curly braces holds all the logic. if 
+using more than one parameter, they must be seperated by a comma.
+a function can be invoked by an event, such as the page loading or a
+button. it also may be called by the javascript code, or self invoked.
+functions normally have a return value, and once that value is reached
+the function will stop executing and return that value.
+a function does not need to contain any parameters, but it always 
+needs the set of parentheses even if empty because that is what 
+actually invokes the function. that is, for a normal function. there
+are also what are known as arrow functions which really shorten your
+code and actually dont require a set of parentheses. arrow functions 
+seem to play a little fast and loose, but more on those later.
+}
+
+
+
+class
+a javascript class is almost like a function, in the sense that the 
+syntax for the two is similar and also the job of a class with a 
+constructor could theoretically be done with a function instead,
+although its much easier this way.  you will use this for 
+creating objects. it is perfect for things like keeping track of
+inventory or making profiles on a website.
+a common example you may see for this is cars.
+
+class car {
+constructor(make, model) {
+this.make = make;
+this.model = model;
+}
+} 
+let car1 = new car("ferrari", 154);
+document.write(car1.make);
+
+
+
+objects
+objects are variables but they can have many values. they are written 
+inside a code block, as we talked about before, that just means 
+inside a set of curly brackets. and they are written with a name for
+each value. you can think of them as an objects attributes. but theyre
+really referred to as its properties. each property for an object 
+has a name for the value, a colon: and the value for that property. 
+when an object has many properties, they must be seperated by a comma.
+at the end of each declaration of an object, you need to end with a 
+semicolon; after the closing curly brace.
+the syntax to access an object and its property can be done in 2 ways
+ dot notation and bracket notation.
+ objectName.propertyName OR objectName[propertyName]
+objects can also have methods, as we learned with classes, and these 
+are just actions to be preformed on objects. they are stored in 
+the properties as function defenitions. heres how that would look.
+
+ var User = {
+name: "Beau",
+isAdmin: false,
+isEmployee: false,
+car: "blue toyota highlander 2001",
+apointmentDate: "2-16-2021 4-PM"
+apointmentWhen: function() {
+return this.name + " " + this.apointmentDate;
+}
+};
+
+
+
+events
+an event is something that happens. it could be a change made by the 
+user, it could be when the page loads, and it could be a button click.
+whatever the event may be, its used to begin a process or enitiate a 
+change. whatever the event is doing can be written inline with the
+html inside a set of quotes or can call a function from the JS file.
+there is a whole host of things that can be attatched to events, and 
+nearly as many events to attatch your javascript to. the internet 
+would be your best resource to learn about events and event handlers.
+
+
+strings
+strings are anything inside a set of quotes, single or double. they 
+are usually a value assigned to a variable and can be words, leters,
+numbers, symbols, or any other form of data including escape 
+characters and hash codes. strings can also be defined as objects 
+by using the keyword new. this would return typeof of object.
+var z = new String ("  ");
+
+string methods and properties
+normally primative values such as words in a string, cannot have 
+methods or properties, but javascript treats strings as objects when
+executing methods and properties. these can be helpful when searching
+for and or altering a string within a string, basically in this case,
+i think of it as a surgeon operating on a string. you can use methods
+to operate as in change, delete, replace, or otherwise alter strings 
+within a string. like if you have a shopping list and need to delete
+a specific vegitable or something, or change the spelling of a 
+specific item, or change milk to almond milk, or even change the 
+quantity of an item. this is also how we concatonate strings together.
+
